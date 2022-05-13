@@ -16,6 +16,7 @@ public class OceanEngineGenerator {
   private static final String URL_PREFIX = "https://ad.oceanengine.com/open_api/2/";
 
   public static void genRequestAndResponse(String url) {
+    System.setProperty("webdriver.chrome.driver","/Users/liukefu/Desktop/drive/chromedriver");
     ChromeDriver chromeDriver = CrawlerHandler.crawler(url);
     CrawlerResult crawlerResult = EntityTableHandler.handleRequestAndResponse(chromeDriver, URL_PREFIX);
     List<SingleFileEntity> singleFileList = CodeGenerator.getSingleFileList(crawlerResult);
