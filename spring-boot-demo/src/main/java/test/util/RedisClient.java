@@ -34,6 +34,10 @@ public class RedisClient implements Closeable {
     poolConfig.setMaxTotal(redisProps.getPoolMaxSize());
     poolConfig.setMaxIdle(redisProps.getPoolMaxIdle());
     poolConfig.setMaxWaitMillis(redisProps.getPoolMaxWaitMs());
+    if(StringUtils.isBlank(redisProps.getPassword())){
+      //解决redis密码为空报错问题。JedisDataException: ERR AUTH <password> called without any password configured
+      redisProps.setPassword(null);
+    }
     this.pool = new JedisPool(poolConfig, redisProps.getHost(), redisProps.getPort(), redisProps.getConnectTimeoutMs(),
       redisProps.getPassword(), redisProps.getDb());
   }
