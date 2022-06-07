@@ -81,7 +81,7 @@ public class AuthWebController {
       return "unsupported channel: " + channel;
     }
     Result<AuthToken> result = authService.create(channel, advertiserId, params);
-    return result.successful() ? "Success" : "Fail";
+    return result;
   }
 
   /**
@@ -100,7 +100,7 @@ public class AuthWebController {
       return "unsupported channel: " + channel;
     }
     Result<AuthToken> result = authService.refreshForAdvertiser(channel, advertiserId);
-    return result.successful() ? "Success" : "Fail";
+    return result;
   }
 
   /**

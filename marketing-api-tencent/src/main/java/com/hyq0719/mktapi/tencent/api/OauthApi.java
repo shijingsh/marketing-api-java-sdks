@@ -10,6 +10,7 @@ import com.hyq0719.mktapi.tencent.bean.common.TencentResponse;
 import com.hyq0719.mktapi.tencent.bean.oauth.OauthAuthorizeRequest;
 import com.hyq0719.mktapi.tencent.bean.oauth.OauthTokenRequest;
 import com.hyq0719.mktapi.tencent.bean.oauth.OauthTokenResponseData;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
@@ -92,6 +93,10 @@ public class OauthApi extends AbstractTencentApi {
       Integer clientId = request.getClientId();
       if (clientId != null) {
         localVarQueryParams.addAll(parameterToPair("client_id", clientId));
+      }
+      String clientSecret = request.getClientSecret();
+      if (StringUtils.isNotBlank(clientSecret)) {
+        localVarQueryParams.addAll(parameterToPair("client_secret", clientSecret));
       }
       String redirectUri = request.getRedirectUri();
       if (redirectUri != null) {

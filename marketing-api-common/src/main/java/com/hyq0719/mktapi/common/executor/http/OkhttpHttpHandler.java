@@ -193,11 +193,12 @@ public class OkhttpHttpHandler extends BaseHttpHandler {
       // Expecting string, return the raw response body.
       return (T) respBody;
     } else {
-      throw new ApiException(
+      /*throw new ApiException(
         "Content type \"" + contentType + "\" is not supported for type: " + returnType,
         response.code(),
         response.headers().toMultimap(),
-        respBody);
+        respBody);*/
+      return getJSON().deserialize(respBody, returnType);
     }
   }
 

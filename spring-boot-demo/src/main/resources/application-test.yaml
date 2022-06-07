@@ -1,9 +1,9 @@
 server:
- port: 8888
+ port: 80
 
 ## 应用配置
 app:
-  debug-mode: true
+  debug-mode: false
   # RedisClient 配置
   redis-client:
     host: 127.0.0.1
@@ -63,7 +63,7 @@ mktapi:
       cron: 0,30 * * * * ?
       configs:
         # your-advertiserId
-        "000000":
-          clientId: 000000
-          secret: your-secret
-          callbackUrl: https://www.example.com/response
+        "8163787":
+          clientId: 1112002981
+          secret: J3QUVS4F0opvMeJX
+          callbackUrl: https://www.xiushangsh.com
