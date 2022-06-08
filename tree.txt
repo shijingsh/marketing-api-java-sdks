@@ -1,0 +1,750 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2
+[WARNING] 'profiles.profile[release].plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-source-plugin @ io.github.hyq0719:marketing-api-sdk:1.0.0-beta.2, D:\work5\marketing-api-java-sdks\pom.xml, line 167, column 19
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.github.hyq0719:marketing-api-sdk:pom:1.0.0-beta.2
+[WARNING] 'profiles.profile[release].plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-source-plugin @ line 167, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 17 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 17 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Marketing API Java SDK                                             [pom]
+[INFO] Marketing API - Common Java SDK                                    [jar]
+[INFO] Marketing API - Ocean Engine Java SDK                              [jar]
+[INFO] Marketing API - VIVO Java SDK                                      [jar]
+[INFO] Marketing API - Tencent Java SDK                                   [jar]
+[INFO] Marketing API - Kuaishou Java SDK                                  [jar]
+[INFO] Marketing API - Spring Boot Starters                               [pom]
+[INFO] Marketing API - Spring Boot Starter for Ocean Engine               [jar]
+[INFO] Marketing API - Spring Boot Starter for VIVO                       [jar]
+[INFO] Marketing API - Spring Boot Starter for Tencent                    [jar]
+[INFO] Marketing API - Spring Boot Starter for Production                 [jar]
+[INFO] Marketing API - Spring Boot Starter for Kuaishou                   [jar]
+[INFO] Marketing API - Class Generators                                   [pom]
+[INFO] Marketing API - Code Generator for Ocean Engine                    [jar]
+[INFO] Marketing API - Code Generator for VIVO                            [jar]
+[INFO] Marketing API - Code Generator for Tencent                         [jar]
+[INFO] marketing-api-spring-boot-demo                                     [jar]
+[INFO] 
+[INFO] ----------------< io.github.hyq0719:marketing-api-sdk >-----------------
+[INFO] Building Marketing API Java SDK 1.0.0-beta.2                      [1/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-sdk ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] io.github.hyq0719:marketing-api-sdk:pom:1.0.0-beta.2
+[INFO] 
+[INFO] ---------------< io.github.hyq0719:marketing-api-common >---------------
+[INFO] Building Marketing API - Common Java SDK 1.0.0-beta.2             [2/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-common ---
+[INFO] io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2
+[INFO] +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |  \- org.springframework:spring-core:jar:5.3.9:compile
+[INFO] |     \- org.springframework:spring-jcl:jar:5.3.9:compile
+[INFO] +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] 
+[INFO] ------------< io.github.hyq0719:marketing-api-oceanengine >-------------
+[INFO] Building Marketing API - Ocean Engine Java SDK 1.0.0-beta.2       [3/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-oceanengine ---
+[INFO] io.github.hyq0719:marketing-api-oceanengine:jar:1.0.0-beta.2
+[INFO] \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO]    +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO]    |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO]    +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO]    +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO]    |  \- org.springframework:spring-core:jar:5.3.9:compile
+[INFO]    |     \- org.springframework:spring-jcl:jar:5.3.9:compile
+[INFO]    +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO]    |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO]    |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO]    |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO]    |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO]    +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO]    |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO]    +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO]    +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO]    +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO]    |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO]    |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO]    |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] 
+[INFO] ----------------< io.github.hyq0719:marketing-api-vivo >----------------
+[INFO] Building Marketing API - VIVO Java SDK 1.0.0-beta.2               [4/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-vivo ---
+[INFO] io.github.hyq0719:marketing-api-vivo:jar:1.0.0-beta.2
+[INFO] \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO]    +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO]    |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO]    +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO]    +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO]    |  \- org.springframework:spring-core:jar:5.3.9:compile
+[INFO]    |     \- org.springframework:spring-jcl:jar:5.3.9:compile
+[INFO]    +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO]    |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO]    |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO]    |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO]    |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO]    +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO]    |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO]    +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO]    +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO]    +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO]    |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO]    |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO]    |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] 
+[INFO] --------------< io.github.hyq0719:marketing-api-tencent >---------------
+[INFO] Building Marketing API - Tencent Java SDK 1.0.0-beta.2            [5/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-tencent ---
+[INFO] io.github.hyq0719:marketing-api-tencent:jar:1.0.0-beta.2
+[INFO] \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO]    +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO]    |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO]    +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO]    +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO]    |  \- org.springframework:spring-core:jar:5.3.9:compile
+[INFO]    |     \- org.springframework:spring-jcl:jar:5.3.9:compile
+[INFO]    +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO]    |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO]    |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO]    |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO]    |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO]    +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO]    |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO]    +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO]    +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO]    +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO]    |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO]    |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO]    |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] 
+[INFO] --------------< io.github.hyq0719:marketing-api-kuaishou >--------------
+[INFO] Building Marketing API - Kuaishou Java SDK 1.0.0-beta.2           [6/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-kuaishou ---
+[INFO] io.github.hyq0719:marketing-api-kuaishou:jar:1.0.0-beta.2
+[INFO] \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO]    +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO]    |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO]    +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO]    +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO]    |  \- org.springframework:spring-core:jar:5.3.9:compile
+[INFO]    |     \- org.springframework:spring-jcl:jar:5.3.9:compile
+[INFO]    +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO]    |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO]    |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO]    |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO]    |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO]    +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO]    |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO]    +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO]    +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO]    +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO]    |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO]    |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO]    |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] 
+[INFO] --------< io.github.hyq0719:marketing-api-spring-boot-starters >--------
+[INFO] Building Marketing API - Spring Boot Starters 1.0.0-beta.2        [7/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-spring-boot-starters ---
+[INFO] io.github.hyq0719:marketing-api-spring-boot-starters:pom:1.0.0-beta.2
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] ---------< io.github.hyq0719:oceanengine-spring-boot-starter >----------
+[INFO] Building Marketing API - Spring Boot Starter for Ocean Engine 1.0.0-beta.2 [8/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ oceanengine-spring-boot-starter ---
+[INFO] io.github.hyq0719:oceanengine-spring-boot-starter:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:marketing-api-oceanengine:jar:1.0.0-beta.2:compile
+[INFO] |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |     |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |     +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |     |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |     |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] -------------< io.github.hyq0719:vivo-spring-boot-starter >-------------
+[INFO] Building Marketing API - Spring Boot Starter for VIVO 1.0.0-beta.2 [9/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ vivo-spring-boot-starter ---
+[INFO] io.github.hyq0719:vivo-spring-boot-starter:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:marketing-api-vivo:jar:1.0.0-beta.2:compile
+[INFO] |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |     |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |     +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |     |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |     |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] -----------< io.github.hyq0719:tencent-spring-boot-starter >------------
+[INFO] Building Marketing API - Spring Boot Starter for Tencent 1.0.0-beta.2 [10/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ tencent-spring-boot-starter ---
+[INFO] io.github.hyq0719:tencent-spring-boot-starter:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:marketing-api-tencent:jar:1.0.0-beta.2:compile
+[INFO] |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |     |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |     +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |     |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |     |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] ----------< io.github.hyq0719:production-spring-boot-starter >----------
+[INFO] Building Marketing API - Spring Boot Starter for Production 1.0.0-beta.2 [11/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ production-spring-boot-starter ---
+[INFO] io.github.hyq0719:production-spring-boot-starter:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:marketing-api-tencent:jar:1.0.0-beta.2:compile
+[INFO] |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |     |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |     +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |     |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |     |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] +- io.github.hyq0719:marketing-api-oceanengine:jar:1.0.0-beta.2:compile
+[INFO] +- io.github.hyq0719:marketing-api-vivo:jar:1.0.0-beta.2:compile
+[INFO] +- io.github.hyq0719:marketing-api-kuaishou:jar:1.0.0-beta.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] -----------< io.github.hyq0719:kuaishou-spring-boot-starter >-----------
+[INFO] Building Marketing API - Spring Boot Starter for Kuaishou 1.0.0-beta.2 [12/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ kuaishou-spring-boot-starter ---
+[INFO] io.github.hyq0719:kuaishou-spring-boot-starter:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:marketing-api-kuaishou:jar:1.0.0-beta.2:compile
+[INFO] |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |     |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |     +- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |     +- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |     |  +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |     |  \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |     |     \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |  |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |  |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] \- org.springframework.boot:spring-boot-configuration-processor:jar:2.5.5:compile
+[INFO] 
+[INFO] -------------< io.github.hyq0719:marketing-api-generators >-------------
+[INFO] Building Marketing API - Class Generators 1.0.0-beta.2           [13/17]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-generators ---
+[INFO] io.github.hyq0719:marketing-api-generators:pom:1.0.0-beta.2
+[INFO] +- org.seleniumhq.selenium:selenium-java:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-api:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-edge-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-opera-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-safari-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-support:jar:3.4.0:compile
+[INFO] |  +- cglib:cglib-nodep:jar:3.2.4:compile
+[INFO] |  +- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- commons-io:commons-io:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  +- net.sourceforge.cssparser:cssparser:jar:0.9.22:compile
+[INFO] |  +- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |  +- com.google.guava:guava:jar:21.0:compile
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.25:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:4.1.0:compile
+[INFO] |  +- net.java.dev.jna:jna-platform:jar:4.1.0:compile
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- com.codeborne:phantomjsdriver:jar:1.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:htmlunit-driver:jar:2.26:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.3.v20170317:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-client:jar:9.4.3.v20170317:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-http:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.3.v20170317:compile
+[INFO] |  +- xalan:serializer:jar:2.7.2:compile
+[INFO] |  +- xalan:xalan:jar:2.7.2:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.yaml:snakeyaml:jar:1.26:compile
+[INFO] \- org.apache.velocity:velocity:jar:1.7:compile
+[INFO]    +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO]    \- commons-lang:commons-lang:jar:2.4:compile
+[INFO] 
+[INFO] -------< io.github.hyq0719:marketing-api-generator-oceanengine >--------
+[INFO] Building Marketing API - Code Generator for Ocean Engine 1.0.0-beta.2 [14/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-generator-oceanengine ---
+[INFO] io.github.hyq0719:marketing-api-generator-oceanengine:jar:1.0.0-beta.2
+[INFO] +- org.seleniumhq.selenium:selenium-java:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-api:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-edge-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-opera-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-safari-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-support:jar:3.4.0:compile
+[INFO] |  +- cglib:cglib-nodep:jar:3.2.4:compile
+[INFO] |  +- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- commons-io:commons-io:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  +- net.sourceforge.cssparser:cssparser:jar:0.9.22:compile
+[INFO] |  +- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |  +- com.google.guava:guava:jar:21.0:compile
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.25:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:4.1.0:compile
+[INFO] |  +- net.java.dev.jna:jna-platform:jar:4.1.0:compile
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- com.codeborne:phantomjsdriver:jar:1.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:htmlunit-driver:jar:2.26:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.3.v20170317:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-client:jar:9.4.3.v20170317:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-http:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.3.v20170317:compile
+[INFO] |  +- xalan:serializer:jar:2.7.2:compile
+[INFO] |  +- xalan:xalan:jar:2.7.2:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.yaml:snakeyaml:jar:1.26:compile
+[INFO] \- org.apache.velocity:velocity:jar:1.7:compile
+[INFO]    +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO]    \- commons-lang:commons-lang:jar:2.4:compile
+[INFO] 
+[INFO] -----------< io.github.hyq0719:marketing-api-generator-vivo >-----------
+[INFO] Building Marketing API - Code Generator for VIVO 1.0.0-beta.2    [15/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-generator-vivo ---
+[INFO] io.github.hyq0719:marketing-api-generator-vivo:jar:1.0.0-beta.2
+[INFO] +- org.seleniumhq.selenium:selenium-java:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-api:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-edge-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-opera-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-safari-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-support:jar:3.4.0:compile
+[INFO] |  +- cglib:cglib-nodep:jar:3.2.4:compile
+[INFO] |  +- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- commons-io:commons-io:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  +- net.sourceforge.cssparser:cssparser:jar:0.9.22:compile
+[INFO] |  +- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |  +- com.google.guava:guava:jar:21.0:compile
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.25:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:4.1.0:compile
+[INFO] |  +- net.java.dev.jna:jna-platform:jar:4.1.0:compile
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- com.codeborne:phantomjsdriver:jar:1.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:htmlunit-driver:jar:2.26:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.3.v20170317:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-client:jar:9.4.3.v20170317:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-http:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.3.v20170317:compile
+[INFO] |  +- xalan:serializer:jar:2.7.2:compile
+[INFO] |  +- xalan:xalan:jar:2.7.2:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.yaml:snakeyaml:jar:1.26:compile
+[INFO] \- org.apache.velocity:velocity:jar:1.7:compile
+[INFO]    +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO]    \- commons-lang:commons-lang:jar:2.4:compile
+[INFO] 
+[INFO] --------------< io.github.hyq0719:tencent-code-generator >--------------
+[INFO] Building Marketing API - Code Generator for Tencent 1.0.0-beta.2 [16/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ tencent-code-generator ---
+[INFO] io.github.hyq0719:tencent-code-generator:jar:1.0.0-beta.2
+[INFO] +- org.seleniumhq.selenium:selenium-java:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-api:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-edge-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-opera-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-safari-driver:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-support:jar:3.4.0:compile
+[INFO] |  +- cglib:cglib-nodep:jar:3.2.4:compile
+[INFO] |  +- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- commons-io:commons-io:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  +- net.sourceforge.cssparser:cssparser:jar:0.9.22:compile
+[INFO] |  +- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] |  +- com.google.guava:guava:jar:21.0:compile
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.26:compile
+[INFO] |  +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.25:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:4.1.0:compile
+[INFO] |  +- net.java.dev.jna:jna-platform:jar:4.1.0:compile
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- com.codeborne:phantomjsdriver:jar:1.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:htmlunit-driver:jar:2.26:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.3.v20170317:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-client:jar:9.4.3.v20170317:compile
+[INFO] |  |     \- org.eclipse.jetty:jetty-http:jar:9.4.3.v20170317:compile
+[INFO] |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.3.v20170317:compile
+[INFO] |  +- xalan:serializer:jar:2.7.2:compile
+[INFO] |  +- xalan:xalan:jar:2.7.2:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.yaml:snakeyaml:jar:1.26:compile
+[INFO] \- org.apache.velocity:velocity:jar:1.7:compile
+[INFO]    +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO]    \- commons-lang:commons-lang:jar:2.4:compile
+[INFO] 
+[INFO] ----------< io.github.hyq0719:marketing-api-spring-boot-demo >----------
+[INFO] Building marketing-api-spring-boot-demo 1.0.0-beta.2             [17/17]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ marketing-api-spring-boot-demo ---
+[INFO] io.github.hyq0719:marketing-api-spring-boot-demo:jar:1.0.0-beta.2
+[INFO] +- io.github.hyq0719:production-spring-boot-starter:jar:1.0.0-beta.2:compile
+[INFO] |  +- io.github.hyq0719:marketing-api-tencent:jar:1.0.0-beta.2:compile
+[INFO] |  |  \- io.github.hyq0719:marketing-api-common:jar:1.0.0-beta.2:compile
+[INFO] |  |     +- io.gsonfire:gson-fire:jar:1.8.0:compile
+[INFO] |  |     +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] |  |     +- com.squareup.okhttp3:okhttp:jar:4.5.0:compile
+[INFO] |  |     |  +- com.squareup.okio:okio:jar:2.5.0:compile
+[INFO] |  |     |  |  \- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.70:compile
+[INFO] |  |     |  \- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.70:compile
+[INFO] |  |     |     \- org.jetbrains:annotations:jar:13.0:compile
+[INFO] |  |     +- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  |     |  +- org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[INFO] |  |     |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |     |  \- commons-codec:commons-codec:jar:1.11:compile
+[INFO] |  |     +- org.apache.httpcomponents:httpmime:jar:4.5.13:compile
+[INFO] |  |     +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO] |  |     +- org.threeten:threetenbp:jar:1.3.5:compile
+[INFO] |  |     \- cn.hutool:hutool-cron:jar:5.6.3:compile
+[INFO] |  |        +- cn.hutool:hutool-core:jar:5.6.3:compile
+[INFO] |  |        \- cn.hutool:hutool-setting:jar:5.6.3:compile
+[INFO] |  |           \- cn.hutool:hutool-log:jar:5.6.3:compile
+[INFO] |  +- io.github.hyq0719:marketing-api-oceanengine:jar:1.0.0-beta.2:compile
+[INFO] |  +- io.github.hyq0719:marketing-api-vivo:jar:1.0.0-beta.2:compile
+[INFO] |  +- io.github.hyq0719:marketing-api-kuaishou:jar:1.0.0-beta.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.5.3:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.5.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.12.4:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.12.4:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.12.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.3:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.50:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.50:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.50:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.3.9:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.3.9:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.9:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.9:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.3.9:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.9:compile
+[INFO] +- redis.clients:jedis:jar:4.1.0:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.31:compile
+[INFO] |  +- org.apache.commons:commons-pool2:jar:2.11.1:compile
+[INFO] |  +- org.json:json:jar:20211205:compile
+[INFO] |  \- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.9.2:compile
+[INFO] |  \- io.springfox:springfox-spring-web:jar:2.9.2:compile
+[INFO] \- io.springfox:springfox-swagger2:jar:2.9.2:compile
+[INFO]    +- io.swagger:swagger-annotations:jar:1.5.20:compile
+[INFO]    +- io.swagger:swagger-models:jar:1.5.20:compile
+[INFO]    +- io.springfox:springfox-spi:jar:2.9.2:compile
+[INFO]    |  \- io.springfox:springfox-core:jar:2.9.2:compile
+[INFO]    |     \- net.bytebuddy:byte-buddy:jar:1.8.12:compile
+[INFO]    +- io.springfox:springfox-schema:jar:2.9.2:compile
+[INFO]    +- io.springfox:springfox-swagger-common:jar:2.9.2:compile
+[INFO]    +- com.google.guava:guava:jar:20.0:compile
+[INFO]    +- com.fasterxml:classmate:jar:1.4.0:compile
+[INFO]    +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO]    +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO]    \- org.mapstruct:mapstruct:jar:1.2.0.Final:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Marketing API Java SDK 1.0.0-beta.2:
+[INFO] 
+[INFO] Marketing API Java SDK ............................. SUCCESS [  1.877 s]
+[INFO] Marketing API - Common Java SDK .................... SUCCESS [  0.081 s]
+[INFO] Marketing API - Ocean Engine Java SDK .............. SUCCESS [  0.011 s]
+[INFO] Marketing API - VIVO Java SDK ...................... SUCCESS [  0.010 s]
+[INFO] Marketing API - Tencent Java SDK ................... SUCCESS [  0.010 s]
+[INFO] Marketing API - Kuaishou Java SDK .................. SUCCESS [  0.011 s]
+[INFO] Marketing API - Spring Boot Starters ............... SUCCESS [  0.019 s]
+[INFO] Marketing API - Spring Boot Starter for Ocean Engine SUCCESS [  0.022 s]
+[INFO] Marketing API - Spring Boot Starter for VIVO ....... SUCCESS [  0.014 s]
+[INFO] Marketing API - Spring Boot Starter for Tencent .... SUCCESS [  0.014 s]
+[INFO] Marketing API - Spring Boot Starter for Production . SUCCESS [  0.014 s]
+[INFO] Marketing API - Spring Boot Starter for Kuaishou ... SUCCESS [  0.014 s]
+[INFO] Marketing API - Class Generators ................... SUCCESS [  0.537 s]
+[INFO] Marketing API - Code Generator for Ocean Engine .... SUCCESS [  0.052 s]
+[INFO] Marketing API - Code Generator for VIVO ............ SUCCESS [  0.052 s]
+[INFO] Marketing API - Code Generator for Tencent ......... SUCCESS [  0.046 s]
+[INFO] marketing-api-spring-boot-demo ..................... SUCCESS [  0.077 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.950 s
+[INFO] Finished at: 2022-06-08T13:33:38+08:00
+[INFO] ------------------------------------------------------------------------
