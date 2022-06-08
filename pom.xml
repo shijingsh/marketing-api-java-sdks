@@ -44,9 +44,9 @@
     <module>marketing-api-vivo</module>
     <module>marketing-api-tencent</module>
     <module>marketing-api-kuaishou</module>
-    <module>spring-boot-starters</module>
-    <module>code-generators</module>
-    <module>spring-boot-demo</module>
+    <module>marketing-api-spring-boot-starters</module>
+    <module>marketing-api-generators</module>
+    <module>marketing-api-spring-boot-demo</module>
   </modules>
 
   <dependencyManagement>
