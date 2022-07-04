@@ -1,7 +1,6 @@
 package com.hyq0719.spring.starter.mktapi.oceanengine.config;
 
 import com.hyq0719.mktapi.common.executor.http.OkhttpHttpHandler;
-import com.hyq0719.mktapi.common.token.ITokenCronService;
 import com.hyq0719.mktapi.common.token.cache.ITokenLocalCache;
 import com.hyq0719.mktapi.oceanengine.OceanApiClient;
 import com.hyq0719.mktapi.oceanengine.OceanRetryStrategy;
@@ -23,9 +22,7 @@ import org.springframework.context.annotation.Import;
 @Import(HttpAutoConfiguration.class)
 @Data
 @Slf4j
-public class OceanAutoConfiguration implements CommandLineRunner {
-
-  private ITokenCronService oceanTrigger;
+public class OceanAutoConfiguration {
 
   @Bean
   @ConditionalOnMissingBean
@@ -63,27 +60,4 @@ public class OceanAutoConfiguration implements CommandLineRunner {
     return new OceanApiClient(oceanCache(), httpsClient, oceanExternalTokenService);
   }
 
-  @Bean
-  public ITokenCronService oceanCronService(OceanExternalTokenService oceanExternalTokenService, SdkProperties sdkProperties) {
-    String cron = sdkProperties.getOceanengine().getCron();
-    if (StringUtils.isEmpty(cron)) {
-      throw new RuntimeException("oceanengine cron is null");
-    }
-    ITokenCronService simpleCronService = new ITokenCronService(oceanExternalTokenService, oceanCache(),
-      sdkProperties.getOceanengine().getCron());
-    simpleCronService.run(); // 注册定时器
-    oceanTrigger = simpleCronService;
-    return simpleCronService;
-  }
-
-  @Override
-  public void run(String... args) {
-    log.info("oceanengine Trigger obj:{}", oceanTrigger);
-    try {
-      oceanTrigger.trigger();
-    } catch (Exception e) {
-      e.printStackTrace();
-      log.info("oceanengine sdk start run error:{}", e.getMessage());
-    }
-  }
 }

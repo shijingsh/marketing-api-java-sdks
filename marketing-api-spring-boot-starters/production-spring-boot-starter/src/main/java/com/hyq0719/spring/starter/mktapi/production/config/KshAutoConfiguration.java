@@ -1,7 +1,6 @@
 package com.hyq0719.spring.starter.mktapi.production.config;
 
 import com.hyq0719.mktapi.common.executor.http.OkhttpHttpHandler;
-import com.hyq0719.mktapi.common.token.ITokenCronService;
 import com.hyq0719.mktapi.common.token.cache.ITokenLocalCache;
 import com.hyq0719.mktapi.kuaishou.KshApiClient;
 import com.hyq0719.mktapi.kuaishou.KshRetryStrategy;
@@ -11,7 +10,6 @@ import com.hyq0719.spring.starter.mktapi.production.properties.SdkProperties;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -23,9 +21,8 @@ import org.springframework.context.annotation.Import;
 @Import(HttpAutoConfiguration.class)
 @Data
 @Slf4j
-public class KshAutoConfiguration implements CommandLineRunner {
+public class KshAutoConfiguration  {
 
-  private ITokenCronService kshTrigger;
 
   @Bean
   @ConditionalOnMissingBean
@@ -64,28 +61,4 @@ public class KshAutoConfiguration implements CommandLineRunner {
     return new KshApiClient(kuaishouCache(), okhttpRequestHandler, kshExternalTokenService);
   }
 
-  @Bean
-  public ITokenCronService kshCronService(KshExternalTokenService kshExternalTokenService, SdkProperties sdkProperties) {
-    String cron = sdkProperties.getKuaishou().getCron();
-    if (StringUtils.isEmpty(cron)) {
-      throw new RuntimeException("kuaishou cron is null");
-    }
-    ITokenCronService simpleCronService = new ITokenCronService(kshExternalTokenService, kuaishouCache(),
-      sdkProperties.getKuaishou().getCron());
-    simpleCronService.run();
-    kshTrigger = simpleCronService;
-    return simpleCronService;
-  }
-
-  @Override
-  public void run(String... args) {
-    log.info("kuaishouTrigger obj:{}", kshTrigger);
-    try {
-      kshTrigger.trigger();
-    } catch (Exception e) {
-      log.info("load data kuaishou failure");
-      e.printStackTrace();
-      log.info("kuaishou sdk start run error:{}", e.getMessage());
-    }
-  }
 }

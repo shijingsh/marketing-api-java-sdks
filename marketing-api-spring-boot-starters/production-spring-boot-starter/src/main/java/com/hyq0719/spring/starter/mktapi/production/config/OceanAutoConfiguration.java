@@ -1,7 +1,6 @@
 package com.hyq0719.spring.starter.mktapi.production.config;
 
 import com.hyq0719.mktapi.common.executor.http.OkhttpHttpHandler;
-import com.hyq0719.mktapi.common.token.ITokenCronService;
 import com.hyq0719.mktapi.common.token.cache.ITokenLocalCache;
 import com.hyq0719.mktapi.oceanengine.OceanApiClient;
 import com.hyq0719.mktapi.oceanengine.OceanRetryStrategy;
@@ -11,8 +10,6 @@ import com.hyq0719.spring.starter.mktapi.production.properties.SdkProperties;
 import com.hyq0719.spring.starter.mktapi.production.properties.SdkProperties.ChannelConfig;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -24,9 +21,8 @@ import org.springframework.context.annotation.Import;
 @Import(HttpAutoConfiguration.class)
 @Data
 @Slf4j
-public class OceanAutoConfiguration implements CommandLineRunner {
+public class OceanAutoConfiguration  {
 
-  private ITokenCronService oceanTrigger;
 
   @Bean
   @ConditionalOnMissingBean
@@ -64,28 +60,4 @@ public class OceanAutoConfiguration implements CommandLineRunner {
     return new OceanApiClient(oceanCache(), httpsClient, oceanExternalTokenService);
   }
 
-  @Bean
-  public ITokenCronService oceanCronService(OceanExternalTokenService oceanExternalTokenService, SdkProperties sdkProperties) {
-    String cron = sdkProperties.getOceanengine().getCron();
-    if (StringUtils.isEmpty(cron)) {
-      throw new RuntimeException("oceanengine cron is null");
-    }
-    ITokenCronService simpleCronService = new ITokenCronService(oceanExternalTokenService, oceanCache(),
-      sdkProperties.getOceanengine().getCron());
-    simpleCronService.run();
-    oceanTrigger = simpleCronService;
-    return simpleCronService;
-  }
-
-  @Override
-  public void run(String... args) {
-    log.info("oceanengine Trigger obj:{}", oceanTrigger);
-    try {
-      oceanTrigger.trigger();
-    } catch (Exception e) {
-      log.info("load 数据 oceanengine failure");
-      e.printStackTrace();
-      log.info("oceanengine sdk start run error:{}", e.getMessage());
-    }
-  }
 }

@@ -66,9 +66,15 @@ public class TencentAuthorizer implements TokenAuthorizer {
         return Result.ofFail();
       }
       OauthTokenResponseData data = response.getData();
+
+      String accountId = data.getAuthorizerInfo().getWechatAccountId();
+      if(StringUtils.isBlank(accountId)){
+        accountId = data.getAuthorizerInfo().getAccountId()+"";
+      }
+
       AuthToken authToken = new AuthToken();
       authToken.setChannel(channel());
-      authToken.setAdvertiserId(data.getAuthorizerInfo().getWechatAccountId());
+      authToken.setAdvertiserId(accountId);
       authToken.setAccessToken(data.getAccessToken());
       authToken.setRefreshToken(data.getRefreshToken());
       long now = System.currentTimeMillis();
