@@ -7,6 +7,7 @@ import com.hyq0719.mktapi.oceanengine.util.OceanDataPageFetcher;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,8 +19,10 @@ import java.util.stream.Collectors;
  */
 @Service
 public class OceanAccountService {
+  /*
+  此处造成循环依赖，暂时屏蔽
   @Resource
-  private OceanSdkService oceanSdkService;
+  private OceanSdkService oceanSdkService;*/
 
   /**
    * @param advertiserId 广告主账号
@@ -27,9 +30,11 @@ public class OceanAccountService {
    * @return 子账号集合
    */
   public List<String> getOceanSubAccounts(String advertiserId, String accessToken) {
-    List<MajordomoAdvertiserSelectStruct> data = OceanDataPageFetcher.fetchData(
+    /*List<MajordomoAdvertiserSelectStruct> data = OceanDataPageFetcher.fetchData(
       oceanSdkService.getAccountServiceApi().majordomoAdvertiserSelect(),
       apiResponse -> {}, new OceanRequest().advertiserId(Long.valueOf(advertiserId)), accessToken);
     return data.stream().map(x -> String.valueOf(x.getAdvertiserId())).collect(Collectors.toList());
+    */
+    return new ArrayList<>();
   }
 }
