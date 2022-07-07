@@ -67,9 +67,12 @@ public class OceanAuthorizer implements TokenAuthorizer {
         return Result.ofFail();
       }
       AccessTokenResponseData data = response.getData();
+
+      long accountId = data.getAdvertiserId();
+
       AuthToken authToken = new AuthToken();
       authToken.setChannel(channel());
-      authToken.setAdvertiserId(advertiserId);
+      authToken.setAdvertiserId(accountId+"");
       authToken.setAccessToken(data.getAccessToken());
       authToken.setRefreshToken(data.getRefreshToken());
       long now = System.currentTimeMillis();
