@@ -172,8 +172,11 @@ public class EntityTableHandler {
     }
     String property = tdElements.get(0).getText().replace("*", "").trim();
     String type = tdElements.get(1).getText().trim();
-    String description = tdElements.get(2).getText()
-      .replace("\n", " ").trim();
+    String description = "";
+    if(tdElements.size()>2){
+      description = tdElements.get(2).getText()
+        .replace("\n", " ").trim();
+    }
     if (description.length() > 100) {//注释限制长度
       description = description.substring(0, 100) + "...";
     }

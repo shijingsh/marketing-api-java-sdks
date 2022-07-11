@@ -38,8 +38,8 @@ public class TencentGenerator {
     String driverPath = "D:\\server\\chromedriver_win32\\chromedriver.exe";
     System.setProperty("webdriver.chrome.driver",driverPath);
 
-    String url = "https://developers.e.qq.com/docs/api/authorize/oauth/oauth_token?version=1.3&_preview=1";
-    //String url = "https://developers.e.qq.com/docs/api/account/advertiser/advertiser_get?version=1.3&_preview=1";
+    //String url = "https://developers.e.qq.com/docs/api/authorize/oauth/oauth_token?version=1.3&_preview=1";
+    String url = "https://developers.e.qq.com/docs/api/account/advertiser/advertiser_get?version=1.3&_preview=1";
     EntityTableHandler.setRequestTableLoc(1);
     EntityTableHandler.setResponseTableLoc(2);
     genRequestAndResponse(url);
