@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>tencent-code-generator</artifactId>
+  <artifactId>marketing-api-generator-tencent</artifactId>
   <name>Marketing API - Code Generator for Tencent</name>
   <description>Marketing API 类代码生成器 腾讯广告</description>
 

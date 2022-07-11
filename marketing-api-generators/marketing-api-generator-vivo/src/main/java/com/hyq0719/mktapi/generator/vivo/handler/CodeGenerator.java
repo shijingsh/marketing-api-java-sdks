@@ -237,7 +237,7 @@ public class CodeGenerator {
             return;
           }
           System.out.println(key);
-          File file = new File(System.getProperty("user.dir") + "/code-generators/vivo-code-generator/" + key);
+          File file = new File(System.getProperty("user.dir") + "/marketing-api-generators/marketing-api-generator-vivo/" + key);
           if (!file.exists()) {
             if (file.createNewFile()) {
               FileOutputStream fos = new FileOutputStream(file);

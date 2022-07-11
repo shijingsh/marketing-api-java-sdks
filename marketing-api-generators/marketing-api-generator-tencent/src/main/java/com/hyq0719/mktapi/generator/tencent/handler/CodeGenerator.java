@@ -236,7 +236,7 @@ public class CodeGenerator {
             return;
           }
           System.out.println(key);
-          File file = new File(System.getProperty("user.dir") + "/code-generators/tencent-code-generator/" + key);
+          File file = new File(System.getProperty("user.dir") + "/marketing-api-generators/marketing-api-generator-tencent/" + key);
           if (!file.exists()) {
             if (file.createNewFile()) {
               FileOutputStream fos = new FileOutputStream(file);

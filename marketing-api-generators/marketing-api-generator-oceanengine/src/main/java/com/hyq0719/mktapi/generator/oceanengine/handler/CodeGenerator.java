@@ -237,7 +237,7 @@ public class CodeGenerator {
           if (org.apache.commons.lang.StringUtils.isEmpty(key)) {
             return;
           }
-          File file = new File(System.getProperty("user.dir") + "/code-generators/oceanengine-code-generator/" + key);
+          File file = new File(System.getProperty("user.dir") + "/marketing-api-generators/marketing-api-generator-oceanengine/" + key);
           if (!file.exists()) {
             if (file.createNewFile()) {
               FileOutputStream fos = new FileOutputStream(file);
