@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EntityTableHandler {
   public static int requestTableLoc = 2;
@@ -173,14 +175,52 @@ public class EntityTableHandler {
     String property = tdElements.get(0).getText().replace("*", "").trim();
     String type = tdElements.get(1).getText().trim();
     String description = "";
-    if(tdElements.size()>2){
-      description = tdElements.get(2).getText()
-        .replace("\n", " ").trim();
+    if(includeChinese(type)){
+      //类型中存在汉字，说明是描述
+      if(tdElements.size()>1){
+        description = tdElements.get(1).getText()
+          .replace("\n", " ").trim();
+      }
+      if (description.length() > 100) {//注释限制长度
+        description = description.substring(0, 100) + "...";
+      }
+      type = getParamType(type);
+    }else{
+      if(tdElements.size()>2){
+        description = tdElements.get(2).getText()
+          .replace("\n", " ").trim();
+      }
+      if (description.length() > 100) {//注释限制长度
+        description = description.substring(0, 100) + "...";
+      }
     }
-    if (description.length() > 100) {//注释限制长度
-      description = description.substring(0, 100) + "...";
-    }
+
+
     return new TableElement(property, type, description, level);
+  }
+
+  public static boolean includeChinese (String type){
+
+    String pattern = "[\\u4e00-\\u9fa5]";
+
+    Pattern r = Pattern.compile(pattern);
+    Matcher m = r.matcher(type);
+    System.out.println(m.matches());
+
+    return m.find();
+  }
+
+  public static String getParamType(String property) {
+    switch (property) {
+      case "fields":
+        return "List<String>";
+      case "level-three":
+        return "2";
+      case "level-four":
+        return "3";
+      default:
+        return "String";
+    }
   }
 
   public static int getDataLevel(String dataClassName) {

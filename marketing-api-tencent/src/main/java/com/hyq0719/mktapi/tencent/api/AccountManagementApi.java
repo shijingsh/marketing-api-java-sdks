@@ -7,6 +7,7 @@ import com.hyq0719.mktapi.common.constant.RequestConstants;
 import com.hyq0719.mktapi.common.executor.parameter.Pair;
 import com.hyq0719.mktapi.tencent.TencentApiRequest;
 import com.hyq0719.mktapi.tencent.TencentDefaultFields;
+import com.hyq0719.mktapi.tencent.bean.account.adAccount.AdvertiserGetListStruct;
 import com.hyq0719.mktapi.tencent.bean.account.adAccount.BusinessManagerRelationsGetListStruct;
 import com.hyq0719.mktapi.tencent.bean.account.adAccount.BusinessManagerRelationsGetRequest;
 import com.hyq0719.mktapi.tencent.bean.account.funds.FundsGetListStruct;
@@ -31,6 +32,7 @@ public class AccountManagementApi extends AbstractTencentApi {
    */
   private volatile FundsGet fundsGet;
   private volatile WechatFundsGet wechatFundsGet;
+  private volatile AdvertiserGet advertiserGet;
 
   public AccountManagementApi(ApiClient apiClient, RetryStrategy retryStrategy) {
     super(apiClient, retryStrategy);
@@ -67,6 +69,18 @@ public class AccountManagementApi extends AbstractTencentApi {
       }
     }
     return wechatFundsGet;
+  }
+
+
+  public AdvertiserGet advertiserGet() {
+    if (advertiserGet == null) {
+      synchronized (AdvertiserGet.class) {
+        if (advertiserGet == null) {
+          advertiserGet = (AdvertiserGet) init(AdvertiserGet.class);
+        }
+      }
+    }
+    return advertiserGet;
   }
 
   @ApiRequestMapping(value = "/business_manager_relations/get", method = RequestConstants.GET, usePostBody = false,
@@ -130,4 +144,26 @@ public class AccountManagementApi extends AbstractTencentApi {
       localVarCollectionQueryParams.addAll(parameterToPairs(MULTI, "fields", fields));
     }
   }
+
+
+  @ApiRequestMapping(value = "/advertiser/get", method = RequestConstants.GET, usePostBody = false,
+    contentTypes = {
+      RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
+  public class AdvertiserGet extends TencentApiRequest<TencentRequest, TencentResponse<ListResponse<AdvertiserGetListStruct>>> {
+
+    @Override
+    public void setRequestParam(List<Pair> localVarQueryParams, List<Pair> localVarCollectionQueryParams,
+                                TencentRequest request) {
+      Long accountId = request.getAccountId();
+      List<String> fields = request.getFields();
+      if (accountId != null) {
+        localVarQueryParams.addAll(parameterToPair(ACCOUNT_ID, accountId));
+      }
+      if (fields == null || fields.isEmpty()) {
+        fields = TencentDefaultFields.BASE_ADVERTISER_GET_FIEDS;
+      }
+      localVarCollectionQueryParams.addAll(parameterToPairs(MULTI, "fields", fields));
+    }
+  }
+
 }

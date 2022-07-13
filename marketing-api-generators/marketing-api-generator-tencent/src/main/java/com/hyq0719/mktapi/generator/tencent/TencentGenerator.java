@@ -39,10 +39,13 @@ public class TencentGenerator {
     System.setProperty("webdriver.chrome.driver",driverPath);
 
     //String url = "https://developers.e.qq.com/docs/api/authorize/oauth/oauth_token?version=1.3&_preview=1";
-    String url = "https://developers.e.qq.com/docs/api/account/advertiser/advertiser_get?version=1.3&_preview=1";
-    EntityTableHandler.setRequestTableLoc(1);
+    String url = "https://developers.e.qq.com/docs/api/account/advertiser/advertiser_get?version=1.3&_preview=1";  //广告主账号
+    //String url = "https://developers.e.qq.com/docs/api/account/advertiser/business_manager_relations_get?version=1.3&_preview=1"; //商务管家账号下广告主信息
+   /* EntityTableHandler.setRequestTableLoc(1);
     EntityTableHandler.setResponseTableLoc(2);
-    genRequestAndResponse(url);
-//    genByTableLocation(url, "Struct", 3);
+    genRequestAndResponse(url);*/
+   /* genByTableLocation(url, "Struct", 1);
+    genByTableLocation(url, "Struct", 2);*/
+    genByTableLocation(url, "AdvertiserGetStruct", 4);/**/
   }
 }

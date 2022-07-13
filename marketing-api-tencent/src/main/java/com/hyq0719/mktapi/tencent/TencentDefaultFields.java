@@ -63,4 +63,9 @@ public class TencentDefaultFields {
   public final static List<String> BASE_FUND_GET_FIEDS = Arrays.asList("fund_type", "balance",
     "fund_status", "realtime_cost", "effect_funds");
 
+  /**
+   * 广告主账户信息全部字段 Advertiser
+   */
+  public final static List<String> BASE_ADVERTISER_GET_FIEDS = Arrays.asList("account_id", "daily_budget",
+    "corporation_name", "contact_person", "contact_person_email", "contact_person_telephone", "contact_person_mobile");
 }
