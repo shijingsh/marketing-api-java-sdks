@@ -1,14 +1,22 @@
 package com.hyq0719.mktapi.common.token.cache;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import net.jodah.expiringmap.ExpirationPolicy;
+import net.jodah.expiringmap.ExpiringMap;
+
+import java.util.concurrent.TimeUnit;
 
 public class LocalCache<K, V> {
 
   /**
    * 存放token，保证线程安全
    */
-  private Map<K, V> cache = new ConcurrentHashMap<>();
+ /* private Map<K, V> cache = new ConcurrentHashMap<>();
+*/
+  private ExpiringMap<K, V> cache = ExpiringMap.builder()
+    .variableExpiration()
+    .expiration(1, TimeUnit.HOURS)
+    .expirationPolicy(ExpirationPolicy.CREATED)
+    .build();
 
   /**
    * 存token
