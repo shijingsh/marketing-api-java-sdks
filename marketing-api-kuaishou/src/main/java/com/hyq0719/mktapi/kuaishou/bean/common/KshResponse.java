@@ -2,7 +2,7 @@ package com.hyq0719.mktapi.kuaishou.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.kuaishou.bean.CodeKey;
+import com.hyq0719.mktapi.common.bean.CodeKey;
 import lombok.Data;
 
 /**

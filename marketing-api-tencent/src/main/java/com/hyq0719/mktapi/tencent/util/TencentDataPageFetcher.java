@@ -1,9 +1,9 @@
 package com.hyq0719.mktapi.tencent.util;
 
 import com.hyq0719.mktapi.common.advice.ApiRequestAdvice;
+import com.hyq0719.mktapi.common.bean.IPage;
 import com.hyq0719.mktapi.common.util.DataPageFetcher;
 import com.hyq0719.mktapi.tencent.TencentApiRequest;
-import com.hyq0719.mktapi.tencent.bean.IPage;
 import com.hyq0719.mktapi.tencent.bean.common.PageResponseData;
 import com.hyq0719.mktapi.tencent.bean.common.TencentResponse;
 import lombok.extern.slf4j.Slf4j;

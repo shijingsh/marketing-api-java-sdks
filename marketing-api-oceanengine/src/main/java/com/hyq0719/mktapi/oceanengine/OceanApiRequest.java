@@ -7,12 +7,12 @@ import com.hyq0719.mktapi.common.ApiResponse;
 import com.hyq0719.mktapi.common.RetryStrategy;
 import com.hyq0719.mktapi.common.advice.ApiRequestAdvice;
 import com.hyq0719.mktapi.common.annotation.ApiRequestMapping;
+import com.hyq0719.mktapi.common.bean.CodeKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import com.hyq0719.mktapi.common.constant.AuthConstants;
 import com.hyq0719.mktapi.common.exception.ApiException;
 import com.hyq0719.mktapi.common.executor.parameter.BaseUrl;
 import com.hyq0719.mktapi.common.executor.parameter.RequestParam;
-import com.hyq0719.mktapi.oceanengine.bean.CodeKey;
-import com.hyq0719.mktapi.oceanengine.bean.TokenKey;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 

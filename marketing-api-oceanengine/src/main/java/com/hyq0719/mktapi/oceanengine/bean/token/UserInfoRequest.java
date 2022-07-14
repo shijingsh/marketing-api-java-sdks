@@ -7,7 +7,7 @@
 package com.hyq0719.mktapi.oceanengine.bean.token;
 
 import com.google.gson.Gson;
-import com.hyq0719.mktapi.oceanengine.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import lombok.Data;
 
 /**

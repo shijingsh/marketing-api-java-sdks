@@ -12,8 +12,8 @@ import com.hyq0719.mktapi.common.executor.parameter.BaseUrl;
 import com.hyq0719.mktapi.common.executor.parameter.Pair;
 import com.hyq0719.mktapi.common.executor.parameter.RequestParam;
 import com.hyq0719.mktapi.common.util.DigestUtil;
-import com.hyq0719.mktapi.vivo.bean.CodeKey;
-import com.hyq0719.mktapi.vivo.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.CodeKey;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 

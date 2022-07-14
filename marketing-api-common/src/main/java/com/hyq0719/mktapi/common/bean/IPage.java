@@ -1,4 +1,4 @@
-package com.hyq0719.mktapi.kuaishou.bean;
+package com.hyq0719.mktapi.common.bean;
 
 public interface IPage extends TokenKey {
   void exchangeCurrentPage(Integer page);

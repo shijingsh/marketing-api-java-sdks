@@ -13,7 +13,7 @@
 package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.tencent.bean.IPage;
+import com.hyq0719.mktapi.common.bean.IPage;
 
 import java.util.List;
 

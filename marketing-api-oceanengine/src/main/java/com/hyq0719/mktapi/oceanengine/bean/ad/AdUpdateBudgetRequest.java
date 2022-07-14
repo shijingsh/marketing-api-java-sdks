@@ -2,7 +2,7 @@ package com.hyq0719.mktapi.oceanengine.bean.ad;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.oceanengine.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import lombok.Data;
 
 @Data

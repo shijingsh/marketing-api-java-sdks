@@ -1,7 +1,7 @@
 package com.hyq0719.mktapi.kuaishou.bean.advertiser;
 
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.kuaishou.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import lombok.Data;
 
 @Data

@@ -8,11 +8,11 @@ package com.hyq0719.mktapi.vivo.bean.acoountService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.vivo.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import lombok.Data;
 
 /**
- * 
+ *
  * @author hyq0719
  * @email yueqi.huang@qq.com
  * @date 2022-02-07 23:52:23

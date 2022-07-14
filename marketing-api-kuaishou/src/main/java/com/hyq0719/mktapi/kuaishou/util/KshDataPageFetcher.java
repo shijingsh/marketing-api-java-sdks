@@ -3,7 +3,7 @@ package com.hyq0719.mktapi.kuaishou.util;
 import com.hyq0719.mktapi.common.advice.ApiRequestAdvice;
 import com.hyq0719.mktapi.common.util.DataPageFetcher;
 import com.hyq0719.mktapi.kuaishou.KshApiRequest;
-import com.hyq0719.mktapi.kuaishou.bean.IPage;
+import com.hyq0719.mktapi.common.bean.IPage;
 import com.hyq0719.mktapi.kuaishou.bean.common.KshResponse;
 import com.hyq0719.mktapi.kuaishou.bean.common.PageResponseData;
 import lombok.extern.slf4j.Slf4j;

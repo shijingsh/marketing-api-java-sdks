@@ -7,12 +7,12 @@
 package com.hyq0719.mktapi.vivo.bean.acoountService;
 
 import com.google.gson.annotations.SerializedName;
-import com.hyq0719.mktapi.vivo.bean.TokenKey;
+import com.hyq0719.mktapi.common.bean.TokenKey;
 import lombok.Data;
 import com.google.gson.Gson;
 
 /**
- * 
+ *
  * @author hyq0719
  * @email yueqi.huang@qq.com
  * @date 2022-02-08 00:23:45
