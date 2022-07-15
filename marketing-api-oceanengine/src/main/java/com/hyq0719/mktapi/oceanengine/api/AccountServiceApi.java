@@ -6,10 +6,7 @@ import com.hyq0719.mktapi.common.annotation.ApiRequestMapping;
 import com.hyq0719.mktapi.common.constant.RequestConstants;
 import com.hyq0719.mktapi.common.executor.parameter.Pair;
 import com.hyq0719.mktapi.oceanengine.OceanApiRequest;
-import com.hyq0719.mktapi.oceanengine.bean.advertiser.AdvertiserFundDailyStatReponseStruct;
-import com.hyq0719.mktapi.oceanengine.bean.advertiser.AdvertiserFundDailyStatRequest;
-import com.hyq0719.mktapi.oceanengine.bean.advertiser.AdvertiserFundGetStruct;
-import com.hyq0719.mktapi.oceanengine.bean.advertiser.MajordomoAdvertiserSelectStruct;
+import com.hyq0719.mktapi.oceanengine.bean.advertiser.*;
 import com.hyq0719.mktapi.oceanengine.bean.common.OceanRequest;
 import com.hyq0719.mktapi.oceanengine.bean.common.OceanResponse;
 import com.hyq0719.mktapi.oceanengine.bean.common.PageResponseData;
@@ -26,6 +23,10 @@ public class AccountServiceApi extends AbstractOceanApi {
    */
   private volatile AdvertiserFundGet advertiserFundGet;
   private volatile AdvertiserFundDailyStat advertiserFundDailyStat;
+  /**
+   * 广告主信息
+   */
+  private volatile AdvertiserGet advertiserGet;
 
   public AccountServiceApi(ApiClient apiClient, RetryStrategy retryStrategy) {
     super(apiClient, retryStrategy);
@@ -62,6 +63,18 @@ public class AccountServiceApi extends AbstractOceanApi {
       }
     }
     return advertiserFundDailyStat;
+  }
+
+
+  public AdvertiserGet advertiserGet() {
+    if (advertiserGet == null) {
+      synchronized (AdvertiserFundGet.class) {
+        if (advertiserGet == null) {
+          advertiserGet = (AdvertiserGet) init(AdvertiserGet.class);
+        }
+      }
+    }
+    return advertiserGet;
   }
 
   @ApiRequestMapping(value = "/majordomo/advertiser/select/", method = RequestConstants.GET, usePostBody =
@@ -121,5 +134,17 @@ public class AccountServiceApi extends AbstractOceanApi {
     }
   }
 
+  @ApiRequestMapping(value = "/advertiser/info/", method = RequestConstants.GET, usePostBody = false,
+    contentTypes = {RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
+  public class AdvertiserGet extends OceanApiRequest<AdvertiserInfoRequest, OceanResponse<AdvertiserInfoResponseData>> {
+    @Override
+    public void setRequestParam(List<Pair> localVarQueryParams, List<Pair> localVarCollectionQueryParams,
+                                AdvertiserInfoRequest oceanRequest) {
+      List<Long> advertiserId = oceanRequest.getAdvertiserIds();
+      if (advertiserId != null && advertiserId.size()>0) {
+        localVarQueryParams.addAll(parameterToPair("advertiser_ids", advertiserId));
+      }
+    }
+  }
 
 }

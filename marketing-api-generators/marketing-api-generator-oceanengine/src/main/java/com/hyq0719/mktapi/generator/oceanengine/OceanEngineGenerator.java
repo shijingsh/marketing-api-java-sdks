@@ -16,7 +16,6 @@ public class OceanEngineGenerator {
   private static final String URL_PREFIX = "https://ad.oceanengine.com/open_api/2/";
 
   public static void genRequestAndResponse(String url) {
-    System.setProperty("webdriver.chrome.driver","/Users/liukefu/Desktop/drive/chromedriver");
     ChromeDriver chromeDriver = CrawlerHandler.crawler(url);
     CrawlerResult crawlerResult = EntityTableHandler.handleRequestAndResponse(chromeDriver, URL_PREFIX);
     List<SingleFileEntity> singleFileList = CodeGenerator.getSingleFileList(crawlerResult);
@@ -34,9 +33,19 @@ public class OceanEngineGenerator {
   }
 
   public static void main(String[] args) {
-    String url = "https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710552261644#item-link-%"
-      + "E5%9F%BA%E7%A1%80%E5%88%9B%E6%84%8F%E4%BF%A1%E6%81%AF";
+
+
+    String driverPath = "D:\\server\\chromedriver_win32\\chromedriver.exe";
+    //String driverPath = "/Users/liukefu/Desktop/drive/chromedriver";
+    System.setProperty("webdriver.chrome.driver",driverPath);
+
+
+   // String url = "https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710552261644#item-link-%" + "E5%9F%BA%E7%A1%80%E5%88%9B%E6%84%8F%E4%BF%A1%E6%81%AF";
+
+    String url = "https://open.oceanengine.com/labels/7/docs/1696710508983311";
+    //String url = "https://open.oceanengine.com/labels/7/docs/1696710526192652";
+    // String url = "https://open.oceanengine.com/labels/7/docs/1696710550620160";
     genRequestAndResponse(url);
-//        genByTableLocation(url, "BaseCreativeStruct", 4);
+    //genByTableLocation(url, "ReportAdvertiserGetListStruct", 3);
   }
 }
