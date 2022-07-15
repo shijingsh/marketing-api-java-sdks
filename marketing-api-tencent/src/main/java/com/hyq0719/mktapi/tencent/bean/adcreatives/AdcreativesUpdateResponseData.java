@@ -14,12 +14,13 @@ package com.hyq0719.mktapi.tencent.bean.adcreatives;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 
 /**
  * AdcreativesUpdateResponseData
  */
-public class AdcreativesUpdateResponseData {
+public class AdcreativesUpdateResponseData implements IBean {
   @SerializedName("adcreative_id")
   private Long adcreativeId = null;
 

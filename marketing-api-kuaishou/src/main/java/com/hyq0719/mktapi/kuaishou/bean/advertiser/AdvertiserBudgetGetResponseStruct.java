@@ -1,10 +1,11 @@
 package com.hyq0719.mktapi.kuaishou.bean.advertiser;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class AdvertiserBudgetGetResponseStruct {
+public class AdvertiserBudgetGetResponseStruct implements IBean {
   @SerializedName("day_budget")
   private Long dayBudget;
 

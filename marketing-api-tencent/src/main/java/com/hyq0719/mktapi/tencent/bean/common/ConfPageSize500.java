@@ -14,12 +14,13 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 
 /**
  * 分页配置信息
  */
-public class ConfPageSize500 {
+public class ConfPageSize500 implements IBean {
   @SerializedName("page")
   private Long page = null;
 

@@ -2,8 +2,9 @@ package com.hyq0719.mktapi.oceanengine.bean.creative;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
-public class ErrorStruct {
+public class ErrorStruct implements IBean {
   @SerializedName("code")
   private Long code = null;
   @SerializedName("message")

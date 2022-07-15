@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.acoountService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-07 22:57:50
  */
 @Data
-public class AccountFetchAccountResponseData {
+public class AccountFetchAccountResponseData implements IBean {
 
   /**
    * 账号标识:所属广告主，来自商业化账户

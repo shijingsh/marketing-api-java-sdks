@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 商标
  */
-public class AdcreativeCorporate {
+public class AdcreativeCorporate implements IBean {
   @SerializedName("corporate_name")
   private String corporateName = null;
 

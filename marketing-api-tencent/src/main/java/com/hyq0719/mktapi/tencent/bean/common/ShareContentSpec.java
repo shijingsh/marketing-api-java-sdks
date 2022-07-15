@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 分享信息，仅在部分朋友圈创意形式下设置有效，具体可通过创意形式查询工具或 adcreative_templates/get 接口进行查询
  */
-public class ShareContentSpec {
+public class ShareContentSpec implements IBean {
   @SerializedName("share_title")
   private String shareTitle = null;
 

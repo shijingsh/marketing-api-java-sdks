@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * 分页配置信息
  */
-public class PageInfo {
+public class PageInfo implements java.io.Serializable{
   @SerializedName("page")
   private Long page = null;
 

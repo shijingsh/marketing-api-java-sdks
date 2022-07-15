@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * ApiErrorStruct
  */
-public class ApiErrorStruct {
+public class ApiErrorStruct implements IBean {
   @SerializedName("type")
   private String type = null;
 

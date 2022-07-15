@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 多版位的审核结果信息
  */
-public class AuditSpecStruct {
+public class AuditSpecStruct implements IBean {
   @SerializedName("site_set")
   private String siteSet = null;
 

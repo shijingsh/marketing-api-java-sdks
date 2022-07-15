@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.Set;
@@ -18,7 +19,7 @@ import java.util.Set;
  * @date 2022-02-08 10:51:27
  */
 @Data
-public class InstallBehaviorStruct {
+public class InstallBehaviorStruct implements IBean {
 
   /**
    * 时间范围：-1标识历史永久，7、30、180、365标识具体天数

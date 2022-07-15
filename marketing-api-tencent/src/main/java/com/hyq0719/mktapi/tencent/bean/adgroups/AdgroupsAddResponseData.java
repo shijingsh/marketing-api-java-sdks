@@ -2,13 +2,14 @@ package com.hyq0719.mktapi.tencent.bean.adgroups;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
  * AdgroupsAddResponseData
  */
 @Data
-public class AdgroupsAddResponseData {
+public class AdgroupsAddResponseData implements IBean {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 

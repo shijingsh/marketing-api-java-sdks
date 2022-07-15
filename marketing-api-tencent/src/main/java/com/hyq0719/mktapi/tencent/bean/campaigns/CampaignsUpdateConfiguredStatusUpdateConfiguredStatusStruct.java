@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.campaigns;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 更新客户设置的状态条件
  */
-public class CampaignsUpdateConfiguredStatusUpdateConfiguredStatusStruct {
+public class CampaignsUpdateConfiguredStatusUpdateConfiguredStatusStruct implements IBean {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 

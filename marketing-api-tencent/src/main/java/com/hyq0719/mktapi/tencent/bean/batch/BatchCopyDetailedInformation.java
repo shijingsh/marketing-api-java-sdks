@@ -1,10 +1,11 @@
 package com.hyq0719.mktapi.tencent.bean.batch;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.Map;
 
-public class BatchCopyDetailedInformation {
+public class BatchCopyDetailedInformation implements IBean {
 
   @SerializedName("account_id")
   private Long accountId;

@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * 过滤条件
  */
-public class FilteringStruct {
+public class FilteringStruct implements IBean {
   @SerializedName("field")
   private String field = null;
 

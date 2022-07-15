@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.ads;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 更新客户设置的状态条件
  */
-public class AdsUpdateConfiguredStatusUpdateConfiguredStatusStruct {
+public class AdsUpdateConfiguredStatusUpdateConfiguredStatusStruct implements IBean {
   @SerializedName("ad_id")
   private Long adId = null;
 

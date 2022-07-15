@@ -2,12 +2,13 @@ package com.hyq0719.mktapi.oceanengine.bean.creative;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class CreativeListStruct {
+public class CreativeListStruct implements IBean {
   @SerializedName("derive_poster_cid")
   private Long derivePosterCid = null;
   @SerializedName("image_mode")

@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * 修改后的创意元素，填写要求同adcreative_elements，当且仅当 online_enabled &#x3D; true 时，此字段允许写入
  */
-public class RevisedAdcreativeElements {
+public class RevisedAdcreativeElements implements IBean {
   @SerializedName("image")
   private String image = null;
 

@@ -8,17 +8,18 @@ package com.hyq0719.mktapi.vivo.bean.acoountService;
 
 import java.math.BigDecimal;;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 import com.google.gson.Gson;
 
 /**
- * 
+ *
  * @author hyq0719
  * @email yueqi.huang@qq.com
  * @date 2022-02-08 00:23:45
  */
 @Data
-public class FinanceTransferQueryTransfersListStruct {
+public class FinanceTransferQueryTransfersListStruct implements IBean {
 
   /**
    * 金额类型-1：现金；2：虚拟金；3：商店虚拟金；4：信息流虚拟金；5：联盟虚拟金

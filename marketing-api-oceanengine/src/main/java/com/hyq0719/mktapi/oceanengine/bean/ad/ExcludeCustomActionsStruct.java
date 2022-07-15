@@ -2,9 +2,10 @@ package com.hyq0719.mktapi.oceanengine.bean.ad;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.oceanengine.bean.common.PageInfo;
 
-public class ExcludeCustomActionsStruct {
+public class ExcludeCustomActionsStruct implements IBean {
   @SerializedName("days")
   private Long days = null;
 

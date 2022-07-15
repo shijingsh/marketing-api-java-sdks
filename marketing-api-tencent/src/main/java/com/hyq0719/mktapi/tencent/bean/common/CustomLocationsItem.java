@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * option_list_item
  */
-public class CustomLocationsItem {
+public class CustomLocationsItem implements IBean {
   @SerializedName("longitude")
   private Double longitude = null;
 

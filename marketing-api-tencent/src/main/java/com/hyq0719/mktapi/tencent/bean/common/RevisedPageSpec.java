@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 修改后的落地页，填写要求同page_spec，当且仅当 online_enabled &#x3D; true 时，此字段允许写入
  */
-public class RevisedPageSpec {
+public class RevisedPageSpec implements IBean {
   @SerializedName("page_id")
   private Long pageId = null;
 

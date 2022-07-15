@@ -2,6 +2,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -9,7 +10,7 @@ import lombok.Data;
  * @date 2022/2/17 4:02 下午
  */
 @Data
-public class AdSugRecommendQueryResponse {
+public class AdSugRecommendQueryResponse implements IBean {
   @SerializedName("code")
   private Long code = null;
 

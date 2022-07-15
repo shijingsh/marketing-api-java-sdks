@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.ads;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * AdsDeleteResponseData
  */
-public class AdsDeleteResponseData {
+public class AdsDeleteResponseData implements IBean {
   @SerializedName("ad_id")
   private Long adId = null;
 

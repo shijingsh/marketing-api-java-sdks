@@ -7,6 +7,7 @@
 package com.hyq0719.mktapi.tencent.bean.oauth;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 import com.google.gson.Gson;
 
@@ -17,7 +18,7 @@ import com.google.gson.Gson;
  * @date 2022-03-06 21:08:15
  */
 @Data
-public class OauthTokenResponseData {
+public class OauthTokenResponseData implements IBean {
 
   /**
    * 权限信息，当 grant_type=refresh_token 时不返回

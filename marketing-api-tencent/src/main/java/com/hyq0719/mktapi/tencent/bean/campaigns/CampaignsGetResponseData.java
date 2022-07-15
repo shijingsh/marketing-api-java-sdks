@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.campaigns;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.tencent.bean.common.ConfPageSize500;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.List;
 /**
  * CampaignsGetResponseData
  */
-public class CampaignsGetResponseData {
+public class CampaignsGetResponseData implements IBean {
   @SerializedName("list")
   private List<CampaignsGetListStruct> list = null;
 

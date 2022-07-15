@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.tencent.bean.account.adAccount;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -17,7 +18,7 @@ import lombok.Data;
  * @date 2022-07-12 15:45:19
  */
 @Data
-public class IndividualQualificationStruct {
+public class IndividualQualificationStruct implements IBean {
 
   /**
    * 身份证图片（正面）id，通过 [images 模块] 上传图片后获得，字段长度最小 1 字节，长度最大 64 字节

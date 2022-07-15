@@ -2,10 +2,11 @@ package com.hyq0719.mktapi.oceanengine.bean.creative;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.List;
 
-public class AdDataStruct {
+public class AdDataStruct implements IBean {
   @SerializedName("ad_download_status")
   private Long adDownloadStatus = null;
   @SerializedName("ad_keywords")

@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.oceanengine.bean.report;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
  * @date 2022-02-17 13:05:11
  */
 @Data
-public class ReportAgentGetV2FilteringStruct {
+public class ReportAgentGetV2FilteringStruct implements IBean {
   /**
    * 广告主 id 列表，若选填该字段，则最少应上传1个广告主id，最多支持同时查询100个广告主。
    */

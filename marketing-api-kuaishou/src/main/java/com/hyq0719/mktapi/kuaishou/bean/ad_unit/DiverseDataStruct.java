@@ -2,10 +2,11 @@ package com.hyq0719.mktapi.kuaishou.bean.ad_unit;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class DiverseDataStruct {
+public class DiverseDataStruct implements IBean {
   @SerializedName("device_os_type")
   private Integer deviceOsType = null;
 

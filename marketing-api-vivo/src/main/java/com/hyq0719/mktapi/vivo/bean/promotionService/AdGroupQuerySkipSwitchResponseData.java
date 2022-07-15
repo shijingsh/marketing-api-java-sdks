@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-08 13:36:36
  */
 @Data
-public class AdGroupQuerySkipSwitchResponseData {
+public class AdGroupQuerySkipSwitchResponseData implements IBean {
 
   /**
    * 广告组广告id

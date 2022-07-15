@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.oceanengine.bean.report;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
  * @date 2022-02-17 12:50:51
  */
 @Data
-public class ReportAdvertiserGetFilteringStruct {
+public class ReportAdvertiserGetFilteringStruct implements IBean {
   /**
    * 投放模式筛选。 允许值: STANDARD:标准投放。 ADLAB_FREE:管家&省心投放
    */

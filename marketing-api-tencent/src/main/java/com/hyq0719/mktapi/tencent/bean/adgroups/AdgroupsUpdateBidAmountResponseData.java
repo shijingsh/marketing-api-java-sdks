@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.adgroups;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * AdgroupsUpdateBidAmountResponseData
  */
-public class AdgroupsUpdateBidAmountResponseData {
+public class AdgroupsUpdateBidAmountResponseData implements IBean {
   @SerializedName("list")
   private List<AdgroupsUpdateBidAmountListStruct> list = null;
 

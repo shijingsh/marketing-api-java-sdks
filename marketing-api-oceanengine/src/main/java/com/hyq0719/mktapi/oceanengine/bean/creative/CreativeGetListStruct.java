@@ -1,12 +1,13 @@
 package com.hyq0719.mktapi.oceanengine.bean.creative;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class CreativeGetListStruct {
+public class CreativeGetListStruct implements IBean {
   @SerializedName("ad_id")
   private Long adId = null;
   @SerializedName("advertiser_id")

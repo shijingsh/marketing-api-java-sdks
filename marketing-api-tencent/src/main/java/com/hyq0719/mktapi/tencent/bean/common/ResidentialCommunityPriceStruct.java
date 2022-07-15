@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 居住社区价格
  */
-public class ResidentialCommunityPriceStruct {
+public class ResidentialCommunityPriceStruct implements IBean {
   @SerializedName("min")
   private Long min = null;
 

@@ -2,12 +2,13 @@ package com.hyq0719.mktapi.oceanengine.bean.campaign;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class CampaignGetFilteringStruct {
+public class CampaignGetFilteringStruct implements IBean {
   @SerializedName("campaign_name")
   private String campaignName = null;
 

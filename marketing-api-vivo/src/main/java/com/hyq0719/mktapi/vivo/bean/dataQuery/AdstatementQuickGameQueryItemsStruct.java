@@ -8,18 +8,19 @@ package com.hyq0719.mktapi.vivo.bean.dataQuery;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 /**
- * 
+ *
  * @author hyq0719
  * @email yueqi.huang@qq.com
  * @date 2022-02-04 21:37:43
  */
 @Data
-public class AdstatementQuickGameQueryItemsStruct {
+public class AdstatementQuickGameQueryItemsStruct implements IBean {
 
   /**
    * 日期数字 例如:20200824

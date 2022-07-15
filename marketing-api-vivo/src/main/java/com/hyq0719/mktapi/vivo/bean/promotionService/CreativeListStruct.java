@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
  * @date 2022-02-08 13:57:27
  */
 @Data
-public class CreativeListStruct {
+public class CreativeListStruct implements IBean {
 
   /**
    * 创意文案，红包激励的创意文案长度<=12个字符,其他则<=16个字符！

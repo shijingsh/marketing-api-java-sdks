@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-17 14:30:21
  */
 @Data
-public class AdCreativeQueryAuditStateListStruct {
+public class AdCreativeQueryAuditStateListStruct implements IBean {
 
   /**
    * 创意编号id

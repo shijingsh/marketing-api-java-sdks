@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.account.funds;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * WechatFundsGetResponseData
  */
-public class WechatFundsGetResponseData {
+public class WechatFundsGetResponseData implements IBean {
   @SerializedName("list")
   private List<WechatFundsGetListStruct> list = null;
 

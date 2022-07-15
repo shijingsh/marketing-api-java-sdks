@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 短视频结构
  */
-public class ShortVideoStruct {
+public class ShortVideoStruct implements IBean {
   @SerializedName("short_video1")
   private Long shortVideo1 = null;
 

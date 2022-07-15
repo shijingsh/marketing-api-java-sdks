@@ -8,10 +8,11 @@ package com.hyq0719.mktapi.oceanengine.bean.material;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class FileImageGetListStruct {
+public class FileImageGetListStruct implements IBean {
   /**
    * 图片ID
    */

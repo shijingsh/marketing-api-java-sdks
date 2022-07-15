@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.oceanengine.bean.dmp;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
  * @date 2022-02-03 19:17:28
  */
 @Data
-public class DmpDataSourceReadDataListStruct {
+public class DmpDataSourceReadDataListStruct implements IBean {
   /**
    * 数据源名称
    */

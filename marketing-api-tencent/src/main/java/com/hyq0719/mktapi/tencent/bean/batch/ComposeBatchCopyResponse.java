@@ -1,10 +1,11 @@
 package com.hyq0719.mktapi.tencent.bean.batch;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.List;
 
-public class ComposeBatchCopyResponse {
+public class ComposeBatchCopyResponse implements IBean {
 
   @SerializedName("list")
   private List<BatchCopyCampaignResult> list;

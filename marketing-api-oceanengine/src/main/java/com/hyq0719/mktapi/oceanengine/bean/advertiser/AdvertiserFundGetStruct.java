@@ -2,10 +2,11 @@ package com.hyq0719.mktapi.oceanengine.bean.advertiser;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class AdvertiserFundGetStruct {
+public class AdvertiserFundGetStruct implements IBean {
   @SerializedName("return_goods_cost")
   private Long returnGoodsCost = null;
 

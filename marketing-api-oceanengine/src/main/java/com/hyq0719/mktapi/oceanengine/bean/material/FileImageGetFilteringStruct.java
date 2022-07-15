@@ -8,12 +8,13 @@ package com.hyq0719.mktapi.oceanengine.bean.material;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class FileImageGetFilteringStruct {
+public class FileImageGetFilteringStruct implements IBean {
   /**
    * 图片ids，可以根据图片ids（创意中使用的图片key，存在一张图片对应多个image_ids的情况）进行过滤数量限制：<=100注意：image_ids、material_ids、signature...
    */

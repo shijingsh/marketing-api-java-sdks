@@ -2,8 +2,9 @@ package com.hyq0719.mktapi.oceanengine.bean.campaign;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
-public class CampaignUpdateStatusError {
+public class CampaignUpdateStatusError implements IBean {
   @SerializedName("campaign_id")
   private Long campaignId = null;
   @SerializedName("error_message")

@@ -1,5 +1,7 @@
 package com.hyq0719.mktapi.tencent.bean.common;
 
-public class BatchResponseData<T> {
+import com.hyq0719.mktapi.common.bean.IBean;
+
+public class BatchResponseData<T> implements IBean {
 
 }

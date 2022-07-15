@@ -1,10 +1,11 @@
 package com.hyq0719.mktapi.tencent.bean.batch;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.List;
 
-public class BatchCopyCampaignResult {
+public class BatchCopyCampaignResult implements IBean {
 
   @SerializedName("campaign_id")
   private Long campaignId;

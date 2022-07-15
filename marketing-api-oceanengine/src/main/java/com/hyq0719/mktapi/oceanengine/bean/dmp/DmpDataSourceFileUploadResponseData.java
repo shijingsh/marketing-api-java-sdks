@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.oceanengine.bean.dmp;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-03 18:22:47
  */
 @Data
-public class DmpDataSourceFileUploadResponseData {
+public class DmpDataSourceFileUploadResponseData implements IBean {
   /**
    * 文件路径，包含作为文件唯一标识的字符串(14天后文件路径过期)
    */

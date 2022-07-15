@@ -15,11 +15,12 @@ package com.hyq0719.mktapi.tencent.bean.targetings;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 返回结构
  */
-public class TargetingsGetListStruct {
+public class TargetingsGetListStruct implements IBean {
   @SerializedName("targeting_id")
   private Long targetingId = null;
 

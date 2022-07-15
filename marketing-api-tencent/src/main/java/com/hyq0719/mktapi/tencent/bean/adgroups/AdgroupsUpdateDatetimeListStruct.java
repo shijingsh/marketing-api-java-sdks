@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.adgroups;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 返回结构
  */
-public class AdgroupsUpdateDatetimeListStruct {
+public class AdgroupsUpdateDatetimeListStruct implements IBean {
   @SerializedName("code")
   private Long code = null;
 

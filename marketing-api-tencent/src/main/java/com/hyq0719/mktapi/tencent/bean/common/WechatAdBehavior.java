@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * 微信再营销，原微信广告行为定向升级为微信再营销
  */
-public class WechatAdBehavior {
+public class WechatAdBehavior implements IBean {
   @SerializedName("actions")
   private List<String> actions = null;
 

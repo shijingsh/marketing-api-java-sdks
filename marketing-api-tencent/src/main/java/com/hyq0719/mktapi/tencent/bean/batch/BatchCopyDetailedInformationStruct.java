@@ -1,8 +1,9 @@
 package com.hyq0719.mktapi.tencent.bean.batch;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
-public class BatchCopyDetailedInformationStruct {
+public class BatchCopyDetailedInformationStruct implements IBean {
 
   @SerializedName("error_address")
   private String errorAddress = null;

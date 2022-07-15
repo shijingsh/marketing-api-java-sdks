@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
  * @date 2022-02-08 12:48:10
  */
 @Data
-public class AdGroupPageInfoByLastIdResponseDataStruct {
+public class AdGroupPageInfoByLastIdResponseDataStruct implements IBean {
 
   /**
    * 该批次的最大ID

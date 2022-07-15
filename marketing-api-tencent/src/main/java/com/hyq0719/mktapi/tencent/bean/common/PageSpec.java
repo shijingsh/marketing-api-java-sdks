@@ -14,12 +14,13 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 
 /**
  * 落地页信息
  */
-public class PageSpec {
+public class PageSpec implements IBean {
   @SerializedName("page_id")
   private Long pageId = null;
 

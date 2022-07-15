@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.ads;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.tencent.bean.common.Adcreative;
 import com.hyq0719.mktapi.tencent.bean.common.AuditSpecStruct;
 
@@ -23,7 +24,7 @@ import java.util.List;
 /**
  * 返回结构
  */
-public class AdsGetListStruct {
+public class AdsGetListStruct implements IBean {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 

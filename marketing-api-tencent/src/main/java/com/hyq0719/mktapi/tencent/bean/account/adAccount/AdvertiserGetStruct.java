@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.tencent.bean.account.adAccount;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
  * @date 2022-07-12 15:45:19
  */
 @Data
-public class AdvertiserGetStruct {
+public class AdvertiserGetStruct implements IBean {
 
   /**
    * 返回信息列表

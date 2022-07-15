@@ -1,6 +1,7 @@
 package com.hyq0719.mktapi.tencent.bean.batch;
 
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.tencent.bean.adcreatives.AdcreativesAddRequest;
 import com.hyq0719.mktapi.tencent.bean.adgroups.AdgroupsAddRequest;
 import com.hyq0719.mktapi.tencent.bean.ads.AdsAddRequest;
@@ -9,7 +10,7 @@ import com.hyq0719.mktapi.tencent.bean.campaigns.CampaignsAddRequest;
 import java.util.List;
 import java.util.Map;
 
-public class ComposeBatchCopyRequest {
+public class ComposeBatchCopyRequest implements IBean {
   @SerializedName("record_id")
   private Integer recordId;
 

@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 修改后的创意内容，当且仅当 online_enabled &#x3D; true 时，此字段允许写入
  */
-public class RevisedAdcreativeSpec {
+public class RevisedAdcreativeSpec implements IBean {
   @SerializedName("revised_adcreative_elements")
   private RevisedAdcreativeElements revisedAdcreativeElements = null;
 

@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.adgroups;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 更新单个广告组出价条件
  */
-public class UpdateBidAmountStruct {
+public class UpdateBidAmountStruct implements IBean {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 

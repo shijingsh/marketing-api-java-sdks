@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * 出价系数设置内容，仅当投放oCPC、oCPM广告时可使用
  */
-public class BidAdjustment {
+public class BidAdjustment implements IBean {
   @SerializedName("site_set_package")
   private List<SiteSetPackageStruct> siteSetPackage = null;
 

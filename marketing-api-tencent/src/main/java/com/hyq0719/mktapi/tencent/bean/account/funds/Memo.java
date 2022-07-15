@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.account.funds;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 更多信息
  */
-public class Memo {
+public class Memo implements IBean {
   @SerializedName("wechat_fund_spec")
   private WechatFundSpec wechatFundSpec = null;
 

@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 视频播放结束页
  */
-public class VideoEndPageSpec {
+public class VideoEndPageSpec implements IBean {
   @SerializedName("end_page_id")
   private String endPageId = null;
 

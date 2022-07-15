@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 浮层卡片创意内容
  */
-public class FloatingZone {
+public class FloatingZone implements IBean {
   @SerializedName("floating_zone_switch")
   private Boolean floatingZoneSwitch = null;
 

@@ -2,10 +2,11 @@ package com.hyq0719.mktapi.oceanengine.bean.report;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class ReportAgentGetV2ListStruct {
+public class ReportAgentGetV2ListStruct implements IBean {
   @SerializedName("today_cost")
   private Float todayCost = null;
 

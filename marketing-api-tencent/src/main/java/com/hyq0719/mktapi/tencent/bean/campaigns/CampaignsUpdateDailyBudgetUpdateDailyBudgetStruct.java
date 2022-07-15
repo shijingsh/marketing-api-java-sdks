@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.campaigns;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 更新日限额条件
  */
-public class CampaignsUpdateDailyBudgetUpdateDailyBudgetStruct {
+public class CampaignsUpdateDailyBudgetUpdateDailyBudgetStruct implements IBean {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 

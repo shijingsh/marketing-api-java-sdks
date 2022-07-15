@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 固定信用金更多信息
  */
-public class CreditRollSpec {
+public class CreditRollSpec implements IBean {
   @SerializedName("limit_amount")
   private Long limitAmount = null;
 

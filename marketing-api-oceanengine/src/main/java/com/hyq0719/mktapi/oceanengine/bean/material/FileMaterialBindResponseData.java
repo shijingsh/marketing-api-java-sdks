@@ -8,12 +8,13 @@ package com.hyq0719.mktapi.oceanengine.bean.material;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class FileMaterialBindResponseData {
+public class FileMaterialBindResponseData implements IBean {
   /**
    * 推送失败列表
    */

@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 小游戏落地页信息
  */
-public class MiniGameSpec {
+public class MiniGameSpec implements IBean {
   @SerializedName("mini_game_tracking_parameter")
   private String miniGameTrackingParameter = null;
 

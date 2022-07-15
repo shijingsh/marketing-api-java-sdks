@@ -2,10 +2,11 @@ package com.hyq0719.mktapi.kuaishou.bean.ad_unit;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 @Data
-public class AdvCardListStruct {
+public class AdvCardListStruct implements IBean {
   @SerializedName("adv_card_id")
   private Long advCardId = null;
 

@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.dataQuery;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-04 18:58:59
  */
 @Data
-public class AdstatementDownloadImeiQueryListStruct {
+public class AdstatementDownloadImeiQueryListStruct implements IBean {
 
   /**
    * 记录标识

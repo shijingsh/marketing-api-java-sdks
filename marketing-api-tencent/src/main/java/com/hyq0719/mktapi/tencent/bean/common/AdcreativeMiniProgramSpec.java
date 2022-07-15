@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 小程序落地页，mini_program_id和mini_program_path要同时填写
  */
-public class AdcreativeMiniProgramSpec {
+public class AdcreativeMiniProgramSpec implements IBean {
   @SerializedName("mini_program_id")
   private String miniProgramId = null;
 

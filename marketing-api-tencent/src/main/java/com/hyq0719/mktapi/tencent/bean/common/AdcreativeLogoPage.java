@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * logo页
  */
-public class AdcreativeLogoPage {
+public class AdcreativeLogoPage implements IBean {
   @SerializedName("image")
   private String image = null;
 

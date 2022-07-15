@@ -14,6 +14,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.List;
 /**
  * PageResponseData
  */
-public class PageResponseData<T> {
+public class PageResponseData<T> implements IBean {
   @SerializedName("list")
   private List<T> list = null;
 

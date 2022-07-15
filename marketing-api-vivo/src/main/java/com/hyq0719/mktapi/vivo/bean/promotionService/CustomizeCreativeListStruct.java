@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.promotionService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-08 13:41:42
  */
 @Data
-public class CustomizeCreativeListStruct {
+public class CustomizeCreativeListStruct implements IBean {
 
   /**
    * 展现形式，详见 【附录-广告创意展现形式】

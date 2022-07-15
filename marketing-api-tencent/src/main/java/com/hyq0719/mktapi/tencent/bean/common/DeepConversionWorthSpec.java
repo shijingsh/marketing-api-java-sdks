@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * oCPC/oCPM 优化 ROI 配置
  */
-public class DeepConversionWorthSpec {
+public class DeepConversionWorthSpec implements IBean {
   @SerializedName("goal")
   private String goal = null;
 

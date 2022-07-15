@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.vivo.bean.dmpTag;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-04 22:21:52
  */
 @Data
-public class AdDmpTagCreateResponseData {
+public class AdDmpTagCreateResponseData implements IBean {
 
   /**
    * 创建成功时返回人群包id

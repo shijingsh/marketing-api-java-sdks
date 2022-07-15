@@ -2,6 +2,7 @@ package com.hyq0719.mktapi.tencent.bean.adgroups;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.tencent.bean.common.*;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * 返回结构
  */
 @Data
-public class AdgroupsGetListStruct {
+public class AdgroupsGetListStruct implements IBean {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 

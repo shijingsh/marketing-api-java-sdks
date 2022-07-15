@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.tencent.bean.account.adAccount;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-03-07 10:35:33
  */
 @Data
-public class BusinessManagerRelationsGetListStruct {
+public class BusinessManagerRelationsGetListStruct implements IBean {
 
   /**
    * 推广帐号 id，有操作权限的帐号 id，包括代理商和广告主帐号 id

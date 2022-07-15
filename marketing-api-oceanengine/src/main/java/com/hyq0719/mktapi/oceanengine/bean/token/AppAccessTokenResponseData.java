@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.oceanengine.bean.token;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  * @date 2022-02-03 10:12:58
  */
 @Data
-public class AppAccessTokenResponseData {
+public class AppAccessTokenResponseData implements IBean {
   /**
    * 应用级别token
    */

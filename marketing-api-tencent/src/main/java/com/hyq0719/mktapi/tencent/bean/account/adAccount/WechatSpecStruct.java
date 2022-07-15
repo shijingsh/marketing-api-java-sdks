@@ -8,6 +8,7 @@ package com.hyq0719.mktapi.tencent.bean.account.adAccount;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 /**
@@ -17,7 +18,7 @@ import lombok.Data;
  * @date 2022-07-12 15:45:19
  */
 @Data
-public class WechatSpecStruct {
+public class WechatSpecStruct implements IBean {
 
   /**
    * 微信账号 id：若为微信公众号则为微信公众号 id，若为通用账号则为通用账号 id。

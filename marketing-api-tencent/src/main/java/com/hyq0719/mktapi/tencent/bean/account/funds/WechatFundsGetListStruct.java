@@ -14,13 +14,14 @@ package com.hyq0719.mktapi.tencent.bean.account.funds;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import com.hyq0719.mktapi.tencent.bean.common.CreditRollSpec;
 import com.hyq0719.mktapi.tencent.bean.common.MiniprogramAmount;
 
 /**
  * 返回结构
  */
-public class WechatFundsGetListStruct {
+public class WechatFundsGetListStruct implements IBean {
   @SerializedName("fund_type")
   private String fundType = null;
 

@@ -14,11 +14,12 @@ package com.hyq0719.mktapi.tencent.bean.common;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 
 /**
  * 标签
  */
-public class AdcreativeLabel {
+public class AdcreativeLabel implements IBean {
   @SerializedName("coordinate_x")
   private Long coordinateX = null;
 

@@ -8,18 +8,19 @@ package com.hyq0719.mktapi.vivo.bean.acoountService;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import com.hyq0719.mktapi.common.bean.IBean;
 import lombok.Data;
 
 import java.util.List;
 
 /**
- * 
+ *
  * @author hyq0719
  * @email yueqi.huang@qq.com
  * @date 2022-02-07 23:52:23
  */
 @Data
-public class FinanceFundsQueryFoundsResponseData {
+public class FinanceFundsQueryFoundsResponseData implements IBean {
 
   /**
    * 对象数据
