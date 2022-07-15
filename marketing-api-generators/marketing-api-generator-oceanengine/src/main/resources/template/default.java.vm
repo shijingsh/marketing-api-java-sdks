@@ -12,6 +12,8 @@ $item;
 import com.google.gson.annotations.SerializedName;
 #if($isRequest)
 import com.hyq0719.mktapi.common.bean.TokenKey;
+#else
+import com.hyq0719.mktapi.common.bean.IBean;
 #end
 import lombok.Data;
 import com.google.gson.Gson;
@@ -23,7 +25,7 @@ import com.google.gson.Gson;
  * @date ${baseClassInfo.datetime}
  */
 @Data
-public class ${className} #if($isRequest)implements TokenKey #end{
+public class ${className} #if($isRequest)implements TokenKey #else implements IBean #end{
 #foreach( $item in $list)
   /**
    * $item.description
