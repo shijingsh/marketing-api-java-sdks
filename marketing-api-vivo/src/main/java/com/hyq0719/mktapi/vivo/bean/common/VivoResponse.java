@@ -3,10 +3,11 @@ package com.hyq0719.mktapi.vivo.bean.common;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.hyq0719.mktapi.common.bean.CodeKey;
+import com.xiushang.common.intf.Response;
 import lombok.Data;
 
 @Data
-public class VivoResponse<T> implements CodeKey {
+public class VivoResponse<T> implements CodeKey, Response<T> {
   @SerializedName("code")
   private Long code = null;
 
@@ -68,5 +69,24 @@ public class VivoResponse<T> implements CodeKey {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+
+  @Override
+  public int code() {
+    if(code==null){
+      return 0;
+    }
+    return code.intValue();
+  }
+
+  @Override
+  public String message() {
+    return message;
+  }
+
+  @Override
+  public T data() {
+    return data;
   }
 }

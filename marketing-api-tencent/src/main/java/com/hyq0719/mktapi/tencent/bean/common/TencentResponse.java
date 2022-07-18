@@ -15,6 +15,7 @@ package com.hyq0719.mktapi.tencent.bean.common;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.hyq0719.mktapi.common.bean.CodeKey;
+import com.xiushang.common.intf.Response;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
 /**
  * CampaignsAddResponse
  */
-public class TencentResponse<T> implements CodeKey {
+public class TencentResponse<T> implements CodeKey, Response<T> {
   @SerializedName("code")
   private Long code = null;
 
@@ -164,5 +165,23 @@ public class TencentResponse<T> implements CodeKey {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  @Override
+  public int code() {
+    if(code==null){
+      return 0;
+    }
+    return code.intValue();
+  }
+
+  @Override
+  public String message() {
+    return message;
+  }
+
+  @Override
+  public T data() {
+    return data;
   }
 }

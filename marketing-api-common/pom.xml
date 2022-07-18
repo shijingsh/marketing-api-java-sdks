@@ -71,6 +71,12 @@
       <version>0.5.10</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.github.shijingsh</groupId>
+      <artifactId>common-core</artifactId>
+      <version>1.5.5</version>
+    </dependency>
+
   </dependencies>
 
 </project>
