@@ -142,7 +142,7 @@ public class AccountServiceApi extends AbstractOceanApi {
                                 AdvertiserInfoRequest oceanRequest) {
       List<Long> advertiserId = oceanRequest.getAdvertiserIds();
       if (advertiserId != null && advertiserId.size()>0) {
-        localVarQueryParams.addAll(parameterToPair("advertiser_ids", advertiserId));
+        localVarQueryParams.addAll(parameterToPairs("multi","advertiser_ids", advertiserId));
       }
     }
   }
