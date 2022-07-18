@@ -3,7 +3,10 @@ package test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Test2 {
+/**
+ * 获取代理商信息
+ */
+public class AdvertiserAgentTest {
 
   public static void main(String args[]){
     String info = getAdvertiserInfo();
@@ -18,12 +21,12 @@ public class Test2 {
 
     // 请求地址
     String open_api_url_prefix = "https://ad.oceanengine.com/open_api/2/";
-    String uri = "majordomo/advertiser/select/";
+    String uri = "agent/info/";
 
     // 请求参数
     Map data = new HashMap(){
       {
-        put("advertiser_id", advertiser_id);
+        put("advertiser_ids", new Long[] {advertiser_id});
       }
     };
 
