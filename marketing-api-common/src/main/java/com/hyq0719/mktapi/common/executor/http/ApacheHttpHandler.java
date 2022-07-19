@@ -42,8 +42,9 @@ public class ApacheHttpHandler extends BaseHttpHandler {
       HttpResponse response = doRequest(param);
       Header[] headers = response.getAllHeaders();
       Map<String, List<String>> headerMap = toMultimap(headers);
+
       T data = handleResponse(response, returnType);
-      return new ApiResponse<>(response.getStatusLine().getStatusCode(), headerMap, data);
+      return new ApiResponse<>(response.getStatusLine().getStatusCode(), headerMap, data,buildUrl(param));
     } catch (IOException e) {
       throw new ApiException(e);
     }

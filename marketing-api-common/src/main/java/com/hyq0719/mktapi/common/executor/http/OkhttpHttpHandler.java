@@ -34,10 +34,13 @@ public class OkhttpHttpHandler extends BaseHttpHandler {
   public <T> ApiResponse<T> execute(RequestParam param, Type returnType) throws ApiException {
     try {
       Call call = buildCall(param);
-      log.info(call.request().toString());
+      String paramStr = call.request().toString();
+      log.info("========================execute call========================");
+      log.info(paramStr);
       Response response = call.execute();
       T data = handleResponse(response, returnType);
-      return new ApiResponse<>(response.code(), response.headers().toMultimap(), data);
+
+      return new ApiResponse<>(response.code(), response.headers().toMultimap(), data,paramStr);
     } catch (IOException e) {
       throw new ApiException(e);
     }
