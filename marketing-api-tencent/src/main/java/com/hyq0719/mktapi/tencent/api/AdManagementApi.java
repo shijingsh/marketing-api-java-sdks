@@ -412,7 +412,7 @@ public class AdManagementApi extends AbstractTencentApi {
 
   @ApiRequestMapping(value = "/adgroups/get", method = RequestConstants.GET, usePostBody = false,
     contentTypes = {RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
-  private class AdgroupsGet
+  public class AdgroupsGet
     extends TencentApiRequest<TencentRequest, TencentResponse<PageResponseData<AdgroupsGetListStruct>>> {
 
     @Override
@@ -457,16 +457,16 @@ public class AdManagementApi extends AbstractTencentApi {
   }
 
   @ApiRequestMapping(value = "/adgroups/add", method = RequestConstants.POST)
-  private class AdgroupsAdd extends TencentApiRequest<AdgroupsAddRequest, TencentResponse<AdgroupsAddResponseData>> {
+  public class AdgroupsAdd extends TencentApiRequest<AdgroupsAddRequest, TencentResponse<AdgroupsAddResponseData>> {
   }
 
   @ApiRequestMapping(value = "/adgroups/update", method = RequestConstants.POST)
-  private class AdgroupsUpdate
+  public class AdgroupsUpdate
     extends TencentApiRequest<AdgroupsUpdateRequest, TencentResponse<AdgroupsUpdateResponseData>> {
   }
 
   @ApiRequestMapping(value = "/adgroups/delete", method = RequestConstants.POST)
-  private class AdgroupsDelete
+  public class AdgroupsDelete
     extends TencentApiRequest<AdgroupsDeleteRequest, TencentResponse<AdgroupsDeleteResponseData>> {
   }
 
@@ -529,7 +529,7 @@ public class AdManagementApi extends AbstractTencentApi {
 
   @ApiRequestMapping(value = "/ads/get", method = RequestConstants.GET, usePostBody = false, contentTypes = {
     RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
-  private class AdsGet extends TencentApiRequest<TencentRequest, TencentResponse<PageResponseData<AdsGetListStruct>>> {
+  public class AdsGet extends TencentApiRequest<TencentRequest, TencentResponse<PageResponseData<AdsGetListStruct>>> {
     @Override
     public void setRequestParam(List<Pair> localVarQueryParams, List<Pair> localVarCollectionQueryParams,
                                 TencentRequest request) {
@@ -563,15 +563,15 @@ public class AdManagementApi extends AbstractTencentApi {
   }
 
   @ApiRequestMapping(value = "/ads/add", method = RequestConstants.POST)
-  private class AdsAdd extends TencentApiRequest<AdsAddRequest, TencentResponse<AdsAddResponseData>> {
+  public class AdsAdd extends TencentApiRequest<AdsAddRequest, TencentResponse<AdsAddResponseData>> {
   }
 
   @ApiRequestMapping(value = "/ads/update", method = RequestConstants.POST)
-  private class AdsUpdate extends TencentApiRequest<AdsUpdateRequest, TencentResponse<AdsUpdateResponseData>> {
+  public class AdsUpdate extends TencentApiRequest<AdsUpdateRequest, TencentResponse<AdsUpdateResponseData>> {
   }
 
   @ApiRequestMapping(value = "/ads/delete", method = RequestConstants.POST)
-  private class AdsDelete extends TencentApiRequest<AdsDeleteRequest, TencentResponse<AdsDeleteResponseData>> {
+  public class AdsDelete extends TencentApiRequest<AdsDeleteRequest, TencentResponse<AdsDeleteResponseData>> {
   }
 
   @ApiRequestMapping(value = "/targetings/get", method = RequestConstants.GET, usePostBody = false,
@@ -620,7 +620,7 @@ public class AdManagementApi extends AbstractTencentApi {
   }
 
   @ApiRequestMapping(value = "/adgroups/update_daily_budget", method = RequestConstants.POST)
-  private class AdgroupsUpdateDailyBudget
+  public class AdgroupsUpdateDailyBudget
     extends TencentApiRequest<AdgroupsUpdateDailyBudgetRequest,
     TencentResponse<AdgroupsUpdateDailyBudgetResponseData>> {
   }
@@ -632,25 +632,25 @@ public class AdManagementApi extends AbstractTencentApi {
   }
 
   @ApiRequestMapping(value = "/adgroups/update_configured_status", method = RequestConstants.POST)
-  private class AdgroupsUpdateConfiguredStatus
+  public class AdgroupsUpdateConfiguredStatus
     extends TencentApiRequest<AdgroupsUpdateConfiguredStatusRequest,
     TencentResponse<AdgroupsUpdateConfiguredStatusResponseData>> {
   }
 
   @ApiRequestMapping(value = "/ads/update_configured_status", method = RequestConstants.POST)
-  private class AdsUpdateConfiguredStatus
+  public class AdsUpdateConfiguredStatus
     extends TencentApiRequest<AdsUpdateConfiguredStatusRequest,
     TencentResponse<AdsUpdateConfiguredStatusResponseData>> {
   }
 
   @ApiRequestMapping(value = "/adgroups/update_datetime", method = RequestConstants.POST)
-  private class AdgroupsUpdateDatetime
+  public class AdgroupsUpdateDatetime
     extends TencentApiRequest<AdgroupsUpdateDatetimeRequest,
     TencentResponse<AdgroupsUpdateDatetimeResponseData>> {
   }
 
   @ApiRequestMapping(value = "/adgroups/update_bid_amount", method = RequestConstants.POST)
-  private class AdgroupsUpdateBidAmount
+  public class AdgroupsUpdateBidAmount
     extends TencentApiRequest<AdgroupsUpdateBidAmountRequest, TencentResponse<AdgroupsUpdateBidAmountResponseData>> {
   }
 
