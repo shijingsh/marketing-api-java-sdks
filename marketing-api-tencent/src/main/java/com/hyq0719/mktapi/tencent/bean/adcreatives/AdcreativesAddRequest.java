@@ -36,7 +36,7 @@ public class AdcreativesAddRequest implements TokenKey {
   private String promotedObjectType = null;
 
   @SerializedName("page_type")
-  private DestinationType pageType = null;
+  private String pageType = null;
 
   @SerializedName("automatic_site_enabled")
   private Boolean automaticSiteEnabled = null;
@@ -191,7 +191,7 @@ public class AdcreativesAddRequest implements TokenKey {
     this.promotedObjectType = promotedObjectType;
   }
 
-  public AdcreativesAddRequest pageType(DestinationType pageType) {
+  public AdcreativesAddRequest pageType(String pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -201,11 +201,11 @@ public class AdcreativesAddRequest implements TokenKey {
    *
    * @return pageType
    */
-  public DestinationType getPageType() {
+  public String getPageType() {
     return pageType;
   }
 
-  public void setPageType(DestinationType pageType) {
+  public void setPageType(String pageType) {
     this.pageType = pageType;
   }
 
