@@ -32,7 +32,7 @@ public class AdcreativesUpdateRequest implements TokenKey {
   private String adcreativeName = null;
 
   @SerializedName("page_type")
-  private DestinationType pageType = null;
+  private String pageType = null;
 
   @SerializedName("page_spec")
   private PageSpec pageSpec = null;
@@ -157,7 +157,7 @@ public class AdcreativesUpdateRequest implements TokenKey {
     this.adcreativeName = adcreativeName;
   }
 
-  public AdcreativesUpdateRequest pageType(DestinationType pageType) {
+  public AdcreativesUpdateRequest pageType(String pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -167,11 +167,11 @@ public class AdcreativesUpdateRequest implements TokenKey {
    *
    * @return pageType
    */
-  public DestinationType getPageType() {
+  public String getPageType() {
     return pageType;
   }
 
-  public void setPageType(DestinationType pageType) {
+  public void setPageType(String pageType) {
     this.pageType = pageType;
   }
 
