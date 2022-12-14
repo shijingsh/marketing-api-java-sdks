@@ -35,6 +35,9 @@ public class CampaignsAddRequest implements TokenKey {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("configured_status")
   private String configuredStatus = null;
 
@@ -134,6 +137,14 @@ public class CampaignsAddRequest implements TokenKey {
   public CampaignsAddRequest configuredStatus(String configuredStatus) {
     this.configuredStatus = configuredStatus;
     return this;
+  }
+
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
   }
 
   /**
