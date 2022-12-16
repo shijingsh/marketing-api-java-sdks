@@ -18,6 +18,7 @@ import com.hyq0719.mktapi.tencent.bean.common.TencentRequest;
 import com.hyq0719.mktapi.tencent.bean.common.TencentResponse;
 import com.hyq0719.mktapi.tencent.bean.common.FilteringStruct;
 import com.hyq0719.mktapi.tencent.bean.common.PageResponseData;
+import com.hyq0719.mktapi.tencent.bean.dynamicCreative.*;
 import com.hyq0719.mktapi.tencent.bean.targetings.TargetingsGetListStruct;
 
 import java.util.List;
@@ -47,6 +48,13 @@ public class AdManagementApi extends AbstractTencentApi {
   private volatile AdcreativesAdd adcreativesAdd;
   private volatile AdcreativesUpdate adcreativesUpdate;
   private volatile AdcreativesDelete adcreativesDelete;
+
+  /**
+   * 广告动态创意
+   */
+  private volatile DynamicCreativesGet dynamicCreativesGet;
+  private volatile DynamicCreativesAdd dynamicCreativesAdd;
+  private volatile DynamicCreativesUpdate dynamicCreativesUpdate;
   /**
    * 广告
    */
@@ -205,6 +213,41 @@ public class AdManagementApi extends AbstractTencentApi {
     }
     return adcreativesDelete;
   }
+
+
+  public DynamicCreativesGet dynamicCreativesGet() {
+    if (dynamicCreativesGet == null) {
+      synchronized (AdcreativesGet.class) {
+        if (dynamicCreativesGet == null) {
+          dynamicCreativesGet = (DynamicCreativesGet) init(DynamicCreativesGet.class);
+        }
+      }
+    }
+    return dynamicCreativesGet;
+  }
+
+  public DynamicCreativesAdd dynamicCreativesAdd() {
+    if (dynamicCreativesAdd == null) {
+      synchronized (DynamicCreativesAdd.class) {
+        if (dynamicCreativesAdd == null) {
+          dynamicCreativesAdd = (DynamicCreativesAdd) init(AdcreativesAdd.class);
+        }
+      }
+    }
+    return dynamicCreativesAdd;
+  }
+
+  public DynamicCreativesUpdate dynamicCreativesUpdate() {
+    if (dynamicCreativesUpdate == null) {
+      synchronized (DynamicCreativesUpdate.class) {
+        if (dynamicCreativesUpdate == null) {
+          dynamicCreativesUpdate = (DynamicCreativesUpdate) init(DynamicCreativesUpdate.class);
+        }
+      }
+    }
+    return dynamicCreativesUpdate;
+  }
+
 
   public AdsGet adsGet() {
     if (adsGet == null) {
@@ -526,6 +569,60 @@ public class AdManagementApi extends AbstractTencentApi {
   public class AdcreativesDelete
     extends TencentApiRequest<AdcreativesDeleteRequest, TencentResponse<AdcreativesDeleteResponseData>> {
   }
+
+
+  @ApiRequestMapping(value = "/dynamic_creatives/get", method = RequestConstants.GET, usePostBody = false,
+    contentTypes = {RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
+  public class DynamicCreativesGet
+    extends TencentApiRequest<TencentRequest, TencentResponse<PageResponseData<DynamicCreativesGetListStruct>>> {
+
+    @Override
+    public void setRequestParam(List<Pair> localVarQueryParams, List<Pair> localVarCollectionQueryParams,
+                                TencentRequest request) {
+      Long accountId = request.getAccountId();
+      if (accountId != null) {
+        localVarQueryParams.addAll(parameterToPair(ACCOUNT_ID, accountId));
+      }
+      List<FilteringStruct> filtering = request.getFiltering();
+      if (filtering != null) {
+        localVarCollectionQueryParams.addAll(
+          parameterToPairs(MULTI, FILTERING, filtering));
+      }
+      Long page = request.getPage();
+      if (page != null) {
+        localVarQueryParams.addAll(parameterToPair(PAGE, page));
+      }
+      Long pageSize = request.getPageSize();
+      if (pageSize != null) {
+        localVarQueryParams.addAll(parameterToPair(PAGE_SIZE, pageSize));
+      }
+      Boolean isDeleted = request.getDeleted();
+      if (isDeleted != null) {
+        localVarQueryParams.addAll(parameterToPair(IS_DELETED, isDeleted));
+      }
+      Boolean linkPageTypeCompatible = request.getLinkPageTypeCompatible();
+      if (linkPageTypeCompatible != null) {
+        localVarQueryParams.addAll(
+          parameterToPair("link_page_type_compatible", linkPageTypeCompatible));
+      }
+      List<String> fields = request.getFields();
+      if (fields == null || fields.isEmpty()) {
+        fields = TencentDefaultFields.BASE_ADCREATIVE_GET_FIEDS;
+      }
+      localVarCollectionQueryParams.addAll(parameterToPairs(MULTI, "fields", fields));
+    }
+  }
+
+  @ApiRequestMapping(value = "/dynamic_creatives/add", method = RequestConstants.POST)
+  public class DynamicCreativesAdd
+    extends TencentApiRequest<DynamicCreativesAddRequest, TencentResponse<DynamicCreativesAddResponseData>> {
+  }
+
+  @ApiRequestMapping(value = "/dynamic_creatives/update", method = RequestConstants.POST)
+  public class DynamicCreativesUpdate
+    extends TencentApiRequest<DynamicCreativesUpdateRequest, TencentResponse<DynamicCreativesUpdateResponseData>> {
+  }
+
 
   @ApiRequestMapping(value = "/ads/get", method = RequestConstants.GET, usePostBody = false, contentTypes = {
     RequestConstants.CONTENT_TYPE_TEXT_PLAIN})
