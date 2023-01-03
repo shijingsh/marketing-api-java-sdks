@@ -230,7 +230,7 @@ public class AdManagementApi extends AbstractTencentApi {
     if (dynamicCreativesAdd == null) {
       synchronized (DynamicCreativesAdd.class) {
         if (dynamicCreativesAdd == null) {
-          dynamicCreativesAdd = (DynamicCreativesAdd) init(AdcreativesAdd.class);
+          dynamicCreativesAdd = (DynamicCreativesAdd) init(DynamicCreativesAdd.class);
         }
       }
     }
