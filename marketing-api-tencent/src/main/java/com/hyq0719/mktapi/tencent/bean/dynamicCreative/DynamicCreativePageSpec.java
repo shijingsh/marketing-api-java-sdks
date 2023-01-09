@@ -75,6 +75,22 @@ public class DynamicCreativePageSpec implements IBean {
     this.pageUrl = pageUrl;
   }
 
+  public AdcreativeMiniProgramSpec getMiniProgramSpec() {
+    return miniProgramSpec;
+  }
+
+  public void setMiniProgramSpec(AdcreativeMiniProgramSpec miniProgramSpec) {
+    this.miniProgramSpec = miniProgramSpec;
+  }
+
+  public MiniGameSpec getMiniGameSpec() {
+    return miniGameSpec;
+  }
+
+  public void setMiniGameSpec(MiniGameSpec miniGameSpec) {
+    this.miniGameSpec = miniGameSpec;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
