@@ -15,6 +15,8 @@ package com.hyq0719.mktapi.tencent.bean.dynamicCreative;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.hyq0719.mktapi.common.bean.IBean;
+import com.hyq0719.mktapi.tencent.bean.common.AdcreativeMiniProgramSpec;
+import com.hyq0719.mktapi.tencent.bean.common.MiniGameSpec;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,6 +30,12 @@ public class DynamicCreativePageSpec implements IBean {
 
   @SerializedName("page_url")
   private String pageUrl = null;
+
+  @SerializedName("mini_program_spec")
+  private AdcreativeMiniProgramSpec miniProgramSpec = null;
+
+  @SerializedName("mini_game_spec")
+  private MiniGameSpec miniGameSpec = null;
 
   public DynamicCreativePageSpec pageId(Long pageId) {
     this.pageId = pageId;
